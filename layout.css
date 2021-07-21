@@ -1,0 +1,260 @@
+*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.header{
+			width: 80%;
+			margin: 10px auto;
+			border-radius: 10px;
+			display: block;
+		}
+		.Menu{
+			float: left;
+			width: 70%;
+			height: 49px;
+			margin: 10px auto;
+			background-color: #d9e4f5;
+			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			border-radius: 10px;
+			border: 1px solid #d9e4f5;
+		}
+		.Menu ul.root{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			
+		}
+		.sub{
+			border-radius: 5px;	
+		}
+		.Menu ul.root >li{
+
+			float: left;
+			height: 50px;
+			width: 25%;
+			position: relative;
+		}
+		.Menu ul.root >li >a{
+			/*float: left;*/
+			display: block;
+			height: 50px;
+			text-decoration: none;
+			color: black;
+			line-height: 50px;
+			text-align: center;
+			font-size: 20px;
+			/*padding: 0px 30px 0px 30px;*/
+		}
+		.Menu ul.root >li >a:hover{
+			background-color: lightblue;
+			border-radius: 10px;	
+		}
+		.Menu ul.root > li:hover > ul.sub{
+			display: block;
+
+		}
+		.Menu ul.root > li > ul.sub{
+			width: 100%;
+			background-color: #d9e4f5;
+			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			position: absolute;
+			top: 50px;
+			left: 0px;
+			display: none;
+		}
+		.Menu ul.root > li > ul.sub li{
+			list-style: none;
+			
+		}
+		.Menu ul.root > li > ul.sub li a{
+			width: 100%;
+			text-decoration: none;
+			list-style: none;
+			display: block;
+			line-height: 50px;
+			color: black;
+			text-align: center;
+			border-bottom: 1px solid white;
+		}
+		.Menu ul.root > li >ul.sub li a:hover{
+			background-color: lightblue;
+			border-radius: 5px;
+		}
+		.Menu ul.root > li >ul.sub li{
+			position: relative;
+			width: 100%;
+			height: 50px;
+		}
+		.sub2{
+			border-radius: 5px;	
+			display: none;
+			list-style: none;
+			text-decoration: none;
+			position: absolute;
+			width: 100%;
+			height: 150px;
+			background-color: #d9e4f5;
+			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			left: 100%;
+			top:0px;
+		}
+		.Menu ul.root > li >ul.sub li:hover .sub2{
+			display: block;
+		}
+
+		.Search{
+			float: right;
+			height: 50px;
+			border-radius: 10px;
+			margin: 10px auto;
+			/* width: 40%; */
+			/* margin: 10px auto; */
+		}
+		.ElementSearch{
+			/* width: 40%; */
+			/*background-color: red;*/
+			/*margin: 100px auto;*/
+		}
+		#inputSearch{
+			height: 40px;
+			border-radius: 8px;  
+			padding-left: 50px;
+			border: 3px solid #d9e4f5; 
+		}
+		#btnSearch{
+			background-color: #d9e4f5;
+			width: 100px;
+			height: 45px;
+			border: unset;
+			font-size: 20px;
+			border-radius: 5px;
+			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+		}
+		#banner{
+			width: 80%;
+			margin: 0 auto;
+		}
+		.Social{
+			
+            width: 80%;
+            margin: 20px auto;
+            height: 50px;
+            
+        }
+        .Social > div{
+            float: left;
+            font-size: 20px;         
+			line-height: 50px; 
+			cursor: pointer;  
+        }
+        #signin{
+			height: 50px;
+			margin-right: 1%;
+            width: 15%;
+			float:right;
+            border-radius: 10px;
+			text-align: center;
+			align-items: center;
+			background-color: #d9e4f5;
+			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+		}
+		#cart{
+			height: 50px;
+            width: 15%;
+			float:right;
+            border-radius: 10px;
+			text-align: center;
+			align-items: center;
+			background-color: #d9e4f5;
+			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+
+        }
+        /* #logout{
+			float: right;
+            text-align: center;
+			width: 10%;
+			border: 2px solid black;
+            border-radius: 10px;
+        } */
+        #logo{
+            width: 68%;
+            text-align: center;
+            font-family: NovaFlat-Regular;
+			font-size: 80px;
+        }
+        #imgUser{
+            height: 50px;
+            vertical-align: middle;
+        }		@font-face{
+			src:url("font/NovaFlat-Regular.ttf");
+			font-family: NovaFlat-Regular;
+		}
+		#imgButton
+		{
+			margin-right: 20px;
+			width:40px;
+			height: 50px;
+            vertical-align: middle;
+        }		@font-face{
+			src:url("font/NovaFlat-Regular.ttf");
+			font-family: NovaFlat-Regular;
+		}
+
+
+
+		@font-face{
+			src:url("font/Quicksand-VariableFont_wght.ttf");
+			font-family: Quicksand;
+		}
+
+		.title{
+			margin: 15px;
+			font-size: 25px;
+			text-underline-position: under;
+		}
+		.itemfooter{
+			width: 1200px;
+			max-width: 100%;
+			margin: 0px auto;
+		}
+		.itemrow{
+			display: flex;
+			margin-left: -5px;
+			margin-right: -5px;
+
+
+		}
+		.itemcol{
+			padding-left: 5px;
+			padding-right: 5px;
+			width: 25%;
+		}
+
+		footer{
+			padding-top: 16px;
+			border-top: 2px solid black;
+			margin-top: 700px;
+
+		}
+		.footerheading{
+			text-transform: uppercase;
+			font-size: 15px;
+
+
+		}
+		.itemrow ul li {
+			padding-left: 0px;
+			list-style: none;
+		}
+		.itemrow ul li a{
+			text-decoration-line: none;
+			font-size:15px;
+			color: #737373;
+			padding: 5px 0px; 
+			display: block;
+		}
+
+		.itemrow ul li  a:hover{
+			color: red;
+		}
+		

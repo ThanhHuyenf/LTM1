@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S&N</title>
+	<link rel="shortcut icon" href="img/logo.ico">
+	<style type="text/css">
+		.content{
+			width: 30%;
+			margin:150px auto;
+			min-height: 270px;
+			background-color: #ff549766;
+		}
+		.title{
+			width: 100%;
+			font-size: 45px;
+			text-align: center;
+			font-family:monospace;
+			height: auto;
+			margin-bottom: 20px;
+		}
+		.detail{
+			width: 100%;
+			text-align: center;
+		}
+		.detail > form{
+			width: 100%;
+			margin: 0 auto;
+			align-content: center;
+		}
+		.detail > form > input{
+			text-indent: 30px;
+			width: 90%;
+			height: 40px;
+			margin-bottom: 10px;
+			color:darkviolet;
+			border-radius: 10px;
+			border: 0px;
+			font-size: 20px;
+		}
+		#login, #signin, #home{
+			text-indent: 0px;;
+			width: 70%;
+			height: 45px;
+			border-radius: 15px;
+		}
+		#login:hover{
+			background-color: orange;
+			border-radius: 10px;
+			border: 0px;
+		}
+		#signin:hover{
+			background-color:indianred;
+			border-radius: 10px;
+			border: 0px;
+		}
+		#home:hover{
+			background-color:orange;
+			border-radius: 10px;
+			border: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="title">Sign in</div>
+		<div class="detail">
+			<form>
+				<input type="text" name="" placeholder="Username" id="userSignIn"><br>
+				<input type="password" name="" placeholder="Password" id="passSignIn1"><br>
+				<input type="password" name="" placeholder="Confirm password" id="passSignIn2"><br>
+				<input type="button" name="" value="Sign in" id="signin" onclick="check();"><br>
+				<input type="button" value="Back to home" id="home" onclick="goHome();"><br>
+				<input type="button" value="Back to login" id="login" onclick="goLogin();"><br>
+				<script type="text/javascript">
+					function check(){
+						var user=document.getElementById("userSignIn");
+						var pass1=document.getElementById("passSignIn1");
+						var pass2=document.getElementById("passSignIn2");
+						
+							if (pass1.value.length<6){
+								alert("Mật khẩu phải có ít nhất 6 ký tự");
+							}
+							else{
+								if (pass1.value!=pass2.value){
+									alert("Mật khẩu xác nhận lại không giống");
+								}
+								else{
+									if (localStorage.getItem(user.value)==null){
+										id=user.value;
+										pass=pass2.value;
+										localStorage.setItem(id,pass1.value);
+										alert("Đăng kí thành công");
+										goLogin();
+									}
+									else{
+										alert("Tài khoản này đã được đăng kí! ")
+									}
+								}
+							}
+						
+					}
+					function goHome(){
+						location.href='Index.html';
+					}
+					function goLogin(){
+						location.href='login.html'
+					}
+				</script>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

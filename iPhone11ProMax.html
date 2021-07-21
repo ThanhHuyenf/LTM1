@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S&N</title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="shortcut icon" href="img/logo.ico">
+	<style type="text/css">
+		.content{
+			width: 80%;			
+			margin: 20px auto;
+			height: auto;
+		}
+		.Search{
+			width: 80%;
+			margin: 10px auto;
+		}
+		.ElementSearch{
+			width: 100%;
+			/*background-color: red;*/
+			/*margin: 100px auto;*/
+		}
+		.ElementSearch form{
+			width: 50%;
+			margin: 0px auto;
+		}
+		.content .ImageItem{
+			width: 30%;
+			height: 500px;
+			
+			float: left;
+			border: 5px solid black;
+			border-radius: 25px;
+			padding: 10px;
+		}
+		.content .DetailItem{
+			width: 65%;
+			height: 500px;
+			float: right;
+			font-size: 20px;
+			text-align: justify;
+		}
+		.content .DetailItem > div{
+			margin-bottom: 10px;
+		}
+		.titleNameItem{
+			font-family: Quicksand;
+			font-size: 45px;
+			color: black;
+			font-weight: solid;
+			margin-bottom: 10px;
+		}
+		.Gia{
+			width: 80%;
+			border: 3px solid black;
+			padding: 10px;
+			background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+			background: url("img/bgGia.gif") no-repeat scroll 86% 12% rgba(0,0,0,0);
+		}
+		.CauHinhSP{
+			text-indent: 30px;
+			line-height: 1.8;
+		}
+		.divAddItem{
+			width: 100%;
+			height: 100px;
+
+		}
+		#addItem{
+			margin: 0px auto;
+			display: block;
+			width: 80%;
+			height: 80px;
+			font-family: Quicksand;
+			color: black;
+			font-size: 20px;
+			background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+			border-radius: 15px;
+		}
+		#addItem:hover{
+			background-color: orange;
+		}
+
+	</style>
+	<script type="text/javascript">
+		var list= new Array();
+		var result
+		list[0] = "img/iphone11promax/1.jpg";
+		list[1] = "img/iphone11promax/2.jpg";
+		list[2] = "img/iphone11promax/3.jpg";
+		list[3] = "img/iphone11promax/4.jpg";
+			
+		function changeImgItem(){
+			i=Math.floor(Math.random()*list.length);
+			kq='<img src="'+list[i]+ '"style="width: 100%;height: 500px">';
+			document.getElementById("imgItem").innerHTML=kq;
+			setTimeout(changeImgItem,2000);
+		}
+	</script>
+</head>
+
+<body onload="changeImgItem()">
+	<div class="Social">
+		<div id="signin" onclick="login();"><img src="img/user.png" alt="" id="imgUser">Login</div>
+		<div id="logo"onclick="location.href='Index.html'">Laptop Asus</div>
+		<div id="logout" onclick="dangxuat();">Logout</div>
+		<script>
+			if (localStorage.getItem("NameUser")!=null){
+		document.getElementById("signin").innerHTML
+		='<img src="img/user.png" alt="" id="imgUser">'+localStorage.getItem("NameUser")+''; 
+		}
+		function dangxuat(){
+			localStorage.removeItem("NameUser");
+			location.href="Index.html"
+		}
+		function login(){
+			location.href="login.html"
+		}
+		</script>
+	</div>
+		<div class="Menu">
+			<ul class="root">
+				<li>
+					<a href="Index.html">Trang chủ</a>
+				</li>
+				<li>
+					<a href="gioiThieu.html">Giới thiệu</a>
+				</li>
+				<li>
+					<a href="SanPham.html">Sản phẩm</a>
+					<ul class="sub">
+						<li>
+							<a href="iPhone12Series.html">Iphone 12 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone12Mini.html">Iphone 12 mini</a>
+								</li>
+								<li>
+									<a href="iPhone12.html">Iphone 12</a>
+								</li>
+								<li>
+									<a href="iPhone12ProMax.html">Iphone 12 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhone11Series.html">Iphone 11 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone11.html">Iphone 11</a>
+								</li>
+								<li>
+									<a href="iPhone11Pro.html">Iphone 11 Pro</a>
+								</li>
+								<li>
+									<a href="iPhone11ProMax.html">Iphone 11 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhoneXSeries.html">Iphone X series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhoneX.html">Iphone X</a>
+								</li>
+								<li>
+									<a href="iPhoneXS.html">Iphone XS</a>
+								</li>
+								<li>
+									<a href="iPhoneXSMax.html">Iphone XS Max</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="GioHang.html">Giỏ hàng</a>
+				</li>
+				<li>
+					<a href="LienHe.html">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="Search">
+			<div class="ElementSearch">
+				<form>
+					<input type="text" size="50" style="height: 38px;border-radius: 8px;  padding-left: 50px" name="">
+			        <input type="button" name="" style="width: 77px;height: 42px;border-radius: 5px;" value="Tìm kiếm">
+			      </form>
+	        </div>
+		</div>
+		<div class="content">
+			<div class="ImageItem">
+				<div id="imgItem">
+					<img src="img/iphone12mini/1.jpg" style="width: 100%;height: 500px">	
+				</div>
+				<div style="margin-top: 20px;text-align: center;">Hình ảnh sản phẩm</div>
+				<div style="min-height: 20px"></div>
+				<div class="divAddItem">
+					<input id="addItem" type="button" value="Thêm vào giỏ hàng" onclick="addSP('iPhone 11 Pro Max','1','24000000')">
+				</div>
+			</div>
+			<div class="DetailItem">
+				<div class="titleNameItem">
+					Iphone 11 Pro Max
+				</div>
+				<div class="Gia">
+					Giá: <font style="font-size: 45px;color: red;font:600 55px Helvetica;margin-left: 30px">24.000.000 <u>đ</u></font>
+				</div>
+				<div class="CauHinhSP">
+					<div>
+						iPhone 11 Pro Max sẽ tiếp nối cuộc cách mạng về camera của Apple sau iPhone XR. Điểm đặc biệt đầu tiên đó là điện thoại sẽ sở hữu 3 camera sau sắp xếp theo hình tam giác kết hợp với đèn flash. Tất cả sẽ nằm trên một mặt vuông lồi tạo ấn tượng ngay từ cái nhìn đầu tiên.
+					</div>
+					<div>
+						Bộ 3 camera này chắc chắn sẽ nâng cao chất lượng hình ảnh lên gấp nhiều lần. iPhone 11 Pro Max sẽ có một camera chính 12MP cho hình ảnh chân thật nhất. Cùng với đó là camera tele room 2X giúp chụp ảnh sắc nét đến từng chi tiết. Cuối cùng là camera góc siêu rộng đạt 120 độ nâng cấp phạm vi chụp ảnh. Công nghệ chụp ảnh hoàn toàn mới Deep Fushion  cũng sẽ cho ra đời những bức ảnh căng nét kể cả trong điều kiện thiếu ánh sáng.
+					</div>
+					<div>
+						iPhone 11 Pro Max chính hãng sẽ sở hữu màn hình 6.5 inch với tai thỏ giống như iPhone XS Max. Viền xung quanh máy cũng được làm mỏng tối đa và mở rộng không gian sử dụng. Màn hình sử dụng tấm nền OLED kết hợp với công nghệ Super Retina HD mang đến những trải nghiệm mới, thú vị hơn.
+					</div>
+					<div>
+						Hơn nữa chiếc điện thoại thông minh này được hỗ trợ sạc nhanh siêu tốc cùng với sạc không dây hiện đại. Sạc không dây của iPhone 11 Pro Max là sạc 15W chứ không phải là sạc 7W như của iPhone X. Sự nâng cấp này sẽ cho phép thiết bị sạc nhanh lên đến 15%, tiết kiệm năng lượng 30%. Đặc biệt, điện thoại sẽ không bị nóng trong quá trình sạc nên độ bền của pin được đảm bảo hơn.
+					</div>
+					<div>
+						iPhone 11 Pro Max được nâng cấp lên chip A13, thế hệ chịp sản xuất trên quy trình 7nm công nghệ EUV. Cùng với đó hệ điều hành iOS 13 mang đến những tính năng mới, đẳng cấp hơn. Đồng thời nó cũng giúp truy cập nhanh chóng, xử lý mượt mà, tiết kiệm năng lượng hiệu quả. Đây được đánh giá là bộ vi xử lý hoàn hảo nhất của Apple từ trước đến nay.
+					</div>
+					<div>
+						Apple cũng đã tạo ra một bước nâng cấp mới trong công nghệ bảo mật Face ID. So với iPhone X thì Face ID của iPhone 11 Pro Max đã tối ưu khả năng nhận diện khuôn mặt hơn. Sản phẩm này đã được trang bị camera hồng ngoại, đèn chiếu cảm biến giúp mở khóa nhanh chóng, chính xác, nâng cao tính bảo mật. Sự nâng cấp càng ngày càng làm cho các sản phẩm của Apple trở nên hoàn hảo, được khách hàng tin dùng nhiều hơn.
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="test.js"></script>
+</body>
+</html>
