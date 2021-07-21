@@ -1,266 +1,268 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Laptop Asus</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="shortcut icon" href="img/logo.ico">
-	<script src="js/banner.js"></script>
+    <title>Laptop Asus</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="img/logo.ico">
+    <script src="js/banner.js"></script>
 </head>
+
 <body onload="changeImgBanner()">
-	<button onclick="topFunction()" id="btnUp" title="Go to top"><img src="img/icon/up.svg" width="30px" alt=""></button>
-	<div class="Social">
-			<div>
-				<img width="200px" src="img/logo.png" alt="" onclick="location.href='Index.html'">
-			</div>
-			<div id="cart" onclick="login();"><img  src="img/cart.svg" alt="" id="imgButton">Giỏ hàng</div>
-			<div id="signin" onclick="login();"><img  src="img/login.svg" alt="" id="imgButton" >Đăng nhập</div>
-			<div id="logout" onclick="dangxuat();"></div>
-			<script>
-				if (localStorage.getItem("NameUser")!=null){
-					document.getElementById("signin").innerHTML
-							='<img src="img/user.png" alt="" id="imgUser">'+localStorage.getItem("NameUser")+''; 
-					document.getElementById("logout").innerText='Logout';
-				}
-			function dangxuat(){
-				localStorage.removeItem("NameUser");
-				location.href="index.html"
-			}
-			function login(){
-				location.href="login.html"
-			}
-			</script>
-	</div>
-	<div class="header">
-		<div class="Menu">
-			<ul class="root">
-				<li>
-					<a href="index.html">Trang chủ</a>
-				</li>
-				<li>
-					<a href="gioithieu.html">Giới thiệu</a>
-				</li>
-				<li>
-					<a href="index.html">Sản phẩm</a>
-					<ul class="sub">
-						<li>
-							<a href="laptop/vivobook/index.html">VivoBook</a>
-							<ul class="sub2">
-								<li>
-									<a href="laptop/vivobook/vivobook_flip/index.html">VivoBook Flip</a>
-								</li>
-								<li>
-									<a href="laptop/vivobook/vivobook_s/index.html">VivoBook S</a>
-								</li>
-								<li>
-									<a href="laptop/vivobook/vivobook/index.html">VivoBook</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="laptop/zenbook/index.html">ZenBook</a>
-							<ul class="sub2">
-								<li>
-									<a href="laptop/zenbook/zenbook-duo/index.html">ZenBook Duo</a>
-								</li>
-								<li>
-									<a href="laptop/zenbook/zenbook-s/index.html">ZenBook S</a>
-								</li>
-								<li>
-									<a href="laptop/zenbook/zenbook-flip/index.html">ZenBook Flip</a>
-								</li>
-								<li>
-									<a href="laptop/zenbook/zenbook-pro/index.html">ZenBook Pro</a>
-								</li>
-								<li>
-									<a href="laptop/zenbook/zenbook/index.html">ZenBook </a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="laptop/rog/index.html">Republic of Gamers</a>
-							<ul class="sub2">
-								<li>
-									<a href="laptop/zenbook/rog-zephyus/index.html">ROG Zephyus</a>
-								</li>
-								<li>
-									<a href="laptop/zenbook/rog-series/index.html">ROG Series</a>
-								</li>
-								<li>
-									<a href="laptop/zenbook/rog-series/index.html">ROG Strix</a>
-								</li>
-							</ul>
-						</li>
-						
-					</ul>
-				</li>
-				<li>
-					<a href="contact.html">Liên hệ</a>
-				</li>
-			</ul>
-		</div>
-		<div class="Search">
-			<div class="ElementSearch">
-				<form>
-					<input id="inputSearch" type="text" size="20">
-					<input id="btnSearch" type="button"value="Tìm kiếm">
-				  </form>
-			</div>
-		</div>
-			
-	</div>
-	
-		<div id="banner">
-			<img src="banner1.jpg" width="1200px" height ="300px" style="border-radius: 5px" >
-		</div>
-		<div class="content">
-			<div class="tab">
-				<div class="title">
-					<strong>VivoBook Series</strong> 
-				</div>
-				<div class = "list">
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="tab">
-				<div class="title">
-					<strong>ZenBook Series</strong> 
-				</div>
-				<div class = "list">
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="tab">
-				<div class="title">
-					<strong>ROG Series</strong> 
-				</div>
-				<div class = "list">
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-					<div class="item">
-						<a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-							<img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-							<div style="margin-bottom: 20px;margin-left:10px;">
-								Asus VivoBook Flip 14 TM420IA-EC031T
-							</div>	
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<footer>
-			<div class="noidung">
-				<table class="itemfooter">
-					<tr class="itemrow">
-						<td class="itemcol">
-							<h3 class="footerheading">Danh sách chi nhánh</h3>
-							<ul >
-								<li >Số 12 Xuân Thủy, Cầu Giấy, Hà Nội</li>
-								<li >Số 56 Thợ Nhuộm, Hoàn Kiếm, Hà Nội</li>
-								<li >Số 34 Nguyễn Văn Cừ, Long Biên, Hà Nội</li>
-							</ul>
-						</td>
-						<td class="itemcol">
-							<h3 class="footerheading">Chăm sóc khách hàng</h3>
-							<ul>
-								<li ><a href="">Trung tâm trợ giúp</a></li>
-								<li ><a href="" >Asus Mall</a></li>
-								<li ><a href="" >Hướng dẫn mua hàng</a></li>
-							</ul>
-						</td>
-						<td class="itemcol" >
-							<h3 class="footerheading">Laptop Asus</h3>
-							<ul >
-								<li ><a href="" >Giới thiệu</a></li>
-								<li ><a href="" >Tuyển dụng</a></li>
-								<li ><a href="" >Điều khoản</a></li>
-							</ul>
-						</td>
-						<td class="itemcol">
-							<h3 class="footerheading">Theo dõi chúng tôi trên</h3>
-								<img src="img/social/facebook.svg" width="40px"alt="" onclick="window.open('https:\/\/www.facebook.com')">
-								<img src="img/social/instagram.svg" width="40px"alt="" onclick="window.open('https:\/\/www.instagram.com')">
-								<img src="img/social/youtube.svg" width="40px"alt="" onclick="window.open('https:\/\/www.youtube.com')">
-						</td>
-						
-					</tr>
-					<tr >
-						<td>
-							<center><p style="color:#737373; margin-top: 20px;">© 2021 - Laptop Asus</p></center>
-						</td>
-					</tr>
-				</table>
-			</div>	
-			
-		</footer>
+    <button onclick="topFunction()" id="btnUp" title="Go to top"><img src="img/icon/up.svg" width="30px" alt=""></button>
+    <div class="header">
+        <img width="200px" src="img/logo.png" alt="" onclick="location.href='Index.html'">
+        <div id="cart" onclick="login();"><img src="img/cart.svg" alt="" id="imgButton">Giỏ hàng</div>
+        <div id="signin" onclick="login();"><img src="img/login.svg" alt="" id="imgButton">Đăng nhập</div>
+        <div id="logout" onclick="dangxuat();"></div>
+        <script>
+            if (localStorage.getItem("NameUser") != null) {
+                document.getElementById("signin").innerHTML = '<img src="img/user.png" alt="" id="imgUser">' + localStorage.getItem("NameUser") + '';
+                document.getElementById("logout").innerText = 'Logout';
+            }
+
+            function dangxuat() {
+                localStorage.removeItem("NameUser");
+                location.href = "index.html"
+            }
+
+            function login() {
+                location.href = "login.html"
+            }
+        </script>
+    </div>
+    <div class="taskbar">
+        <div class="menu">
+            <ul class="root">
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="gioithieu.html">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="index.html">Sản phẩm</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="laptop/vivobook/index.html">VivoBook</a>
+                            <ul class="sub2">
+                                <li>
+                                    <a href="laptop/vivobook/vivobook_flip/index.html">VivoBook Flip</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/vivobook/vivobook_s/index.html">VivoBook S</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/vivobook/vivobook/index.html">VivoBook</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="laptop/zenbook/index.html">ZenBook</a>
+                            <ul class="sub2">
+                                <li>
+                                    <a href="laptop/zenbook/zenbook-duo/index.html">ZenBook Duo</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/zenbook/zenbook-s/index.html">ZenBook S</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/zenbook/zenbook-flip/index.html">ZenBook Flip</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/zenbook/zenbook-pro/index.html">ZenBook Pro</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/zenbook/zenbook/index.html">ZenBook </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="laptop/rog/index.html">Republic of Gamers</a>
+                            <ul class="sub2">
+                                <li>
+                                    <a href="laptop/zenbook/rog-zephyus/index.html">ROG Zephyus</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/zenbook/rog-series/index.html">ROG Series</a>
+                                </li>
+                                <li>
+                                    <a href="laptop/zenbook/rog-series/index.html">ROG Strix</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <div>
+                <form>
+                    <input id="inputSearch" type="text" size="20">
+                    <input id="btnSearch" type="button" value="Tìm kiếm">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="banner">
+        <img src="banner1.jpg" width="1200px" height="300px" style="border-radius: 5px">
+    </div>
+    <div class="content">
+        <div class="tab">
+            <div class="title">
+                <strong>TOP OF VIVOBOOK</strong>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="title">
+                <strong>TOP OF ZENBOOK</strong>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="title">
+                <strong>TOP OF ROG</strong>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
+                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
+                        <div style="margin-bottom: 20px;margin-left:10px;">
+                            Asus VivoBook Flip 14 TM420IA-EC031T
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="noidung">
+            <table class="itemfooter">
+                <tr class="itemrow">
+                    <td class="itemcol">
+                        <h3 class="footerheading">Danh sách chi nhánh</h3>
+                        <ul>
+                            <li>Số 12 Xuân Thủy, Cầu Giấy, Hà Nội</li>
+                            <li>Số 56 Thợ Nhuộm, Hoàn Kiếm, Hà Nội</li>
+                            <li>Số 34 Nguyễn Văn Cừ, Long Biên, Hà Nội</li>
+                        </ul>
+                    </td>
+                    <td class="itemcol">
+                        <h3 class="footerheading">Chăm sóc khách hàng</h3>
+                        <ul>
+                            <li><a href="">Trung tâm trợ giúp</a></li>
+                            <li><a href="">Asus Mall</a></li>
+                            <li><a href="">Hướng dẫn mua hàng</a></li>
+                        </ul>
+                    </td>
+                    <td class="itemcol">
+                        <h3 class="footerheading">Laptop Asus</h3>
+                        <ul>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Tuyển dụng</a></li>
+                            <li><a href="">Điều khoản</a></li>
+                        </ul>
+                    </td>
+                    <td class="itemcol">
+                        <h3 class="footerheading">Theo dõi chúng tôi trên</h3>
+                        <img src="img/social/facebook.svg" width="40px" alt="" onclick="window.open('https:\/\/www.facebook.com')">
+                        <img src="img/social/instagram.svg" width="40px" alt="" onclick="window.open('https:\/\/www.instagram.com')">
+                        <img src="img/social/youtube.svg" width="40px" alt="" onclick="window.open('https:\/\/www.youtube.com')">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <p style="color:#737373; margin-top: 20px;">© 2021 - Laptop Asus</p>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </footer>
 </body>
 <script src="js/uptotop.js"></script>
+
 </html>
