@@ -14,22 +14,7 @@
         <img width="200px" src="img/logo.png" alt="" onclick="location.href='Index.html'">
         <div id="cart" onclick="login();"><img src="img/cart.svg" alt="" id="imgButton">Giỏ hàng</div>
         <div id="signin" onclick="login();"><img src="img/login.svg" alt="" id="imgButton">Đăng nhập</div>
-        <div id="logout" onclick="dangxuat();"></div>
-        <script>
-            if (localStorage.getItem("NameUser") != null) {
-                document.getElementById("signin").innerHTML = '<img src="img/user.png" alt="" id="imgUser">' + localStorage.getItem("NameUser") + '';
-                document.getElementById("logout").innerText = 'Logout';
-            }
-
-            function dangxuat() {
-                localStorage.removeItem("NameUser");
-                location.href = "index.html"
-            }
-
-            function login() {
-                location.href = "login.html"
-            }
-        </script>
+        <div id="logout" onclick="logout();"></div>
     </div>
     <div class="taskbar">
         <div class="menu">
@@ -264,5 +249,6 @@
     </footer>
 </body>
 <script src="js/uptotop.js"></script>
+<script src="js/log.js"></script>
 
 </html>
