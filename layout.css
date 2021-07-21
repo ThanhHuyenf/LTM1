@@ -126,7 +126,7 @@
 			width: 100px;
 			height: 45px;
 			border: unset;
-			font-size: 20px;
+			font-size: 17px;
 			border-radius: 5px;
 			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
 		}
@@ -154,9 +154,11 @@
 			float:right;
             border-radius: 10px;
 			text-align: center;
+			transition-duration: 0.7s;
 			align-items: center;
 			background-color: #d9e4f5;
 			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			
 		}
 		#cart{
 			height: 50px;
@@ -167,8 +169,12 @@
 			align-items: center;
 			background-color: #d9e4f5;
 			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			transition-duration: 0.7s;
 
         }
+		#signin:hover,#cart:hover{
+			transform:scale(1.1);
+		}
         /* #logout{
 			float: right;
             text-align: center;
@@ -239,22 +245,44 @@
 		.footerheading{
 			text-transform: uppercase;
 			font-size: 15px;
-
+			margin-bottom: 10px;
 
 		}
 		.itemrow ul li {
 			padding-left: 0px;
 			list-style: none;
-		}
-		.itemrow ul li a{
-			text-decoration-line: none;
-			font-size:15px;
 			color: #737373;
+			font-size:15px;
 			padding: 5px 0px; 
 			display: block;
 		}
+		.itemrow ul li a{
+			color: #737373;
+			text-decoration-line: none;
+		}
 
 		.itemrow ul li  a:hover{
-			color: red;
+			color: lightblue;
 		}
-		
+		.itemcol img{
+			cursor: pointer;
+		}
+		#btnUp {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			border: none;
+			outline: none;
+			background-color: #d9e4f5;
+			background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			cursor: pointer;
+			padding: 15px;
+			border-radius: 25px;
+		  }
+		  
+		  #btnUp:hover {
+			background-color: #555;
+		  }
+		  
