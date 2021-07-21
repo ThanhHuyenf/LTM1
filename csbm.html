@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="shortcut icon" href="img/logo.ico">
+	<title>S&N</title>
+	<!-- <script type="text/javascript">
+		var list= new Array();
+		var result
+		list[0] = "img/banner1.jpg";
+		list[1] = "img/banner2.jpg";
+		list[2] = "img/banner3.jpg";
+		list[3] = "img/banner4.jpg";
+			
+		function changeImgBanner(){
+			i=Math.floor(Math.random()*list.length);
+			kq='<img src="'+list[i]+ '"style="width: 100%;border-radius: 10px">';
+			document.getElementById("banner").innerHTML=kq;
+			setTimeout(changeImgBanner,2000);
+		}
+	</script> -->
+	<style type="text/css">
+				.NoiDung{
+			width: 80%;
+			margin: 10px auto;
+			height: auto;
+			font-size: 25px;
+			text-indent: 25px;
+		}
+		.ListMenuDocGT{
+			margin: 0px;
+			padding: 0px;
+			width: 23%;
+			height: auto;
+			float:left;
+		}
+
+		.ListMenuDocGT li:hover{
+			background-color: orange;
+		}
+		.ListMenuDocGT li{
+			list-style: none;
+			border:1px inset black;
+			background-color: lightblue;
+		}
+		.ListMenuDocGT li a{
+			display: block;
+			text-decoration: none;
+			line-height: 80px;
+		}
+		.contentGT{
+			float: left;
+			width: 75%;
+			margin-left: 10px;
+			min-height: 400px;
+			background-color: red;
+		}
+		.titleGT{
+			width: 100%;
+			min-height: 50px;
+			background-color: green;
+			font-weight: bold;
+			text-align: center;
+		}
+		.detailGT{
+			width: 100%;
+			min-height: 350px;
+			background-color: tan;
+		}
+		.itemfooter{
+			width: 1200px;
+			max-width: 100%;
+			margin: 0px auto;
+		}
+		.itemrow{
+			display: flex;
+			margin-left: -5px;
+			margin-right: -5px;
+
+
+		}
+		.itemcol{
+			padding-left: 5px;
+			padding-right: 5px;
+			width: 25%;
+		}
+
+		footer{
+			padding-top: 16px;
+			border-top: 2px solid black;
+			margin-top: 600px;
+
+		}
+		.footerheading{
+			text-transform: uppercase;
+			font-size: 15px;
+
+
+		}
+		.itemrow ul li {
+			padding-left: 0px;
+			list-style: none;
+		}
+		.itemrow ul li a{
+			text-decoration-line: none;
+			font-size:15px;
+			color: #737373;
+			padding: 5px 0px; 
+			display: block;
+		}
+
+		.itemrow ul li  a:hover{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="Social">
+		<div id="signin" onclick="login();"><img src="img/user.png" alt="" id="imgUser">Login</div>
+		<div id="logo" onclick="location.href='Index.html'">Laptop Asus</div>
+		<div id="logout" onclick="dangxuat();">Logout</div>
+		<script>
+			if (localStorage.getItem("NameUser")!=null){
+		document.getElementById("signin").innerHTML
+		='<img src="img/user.png" alt="" id="imgUser">'+localStorage.getItem("NameUser")+''; 
+		}
+		function dangxuat(){
+			localStorage.removeItem("NameUser");
+			location.href="Index.html"
+		}
+		function login(){
+			location.href="login.html"
+		}
+		</script>
+	</div>
+	<div class="Menu">
+		<ul class="root">
+			<li>
+				<a href="Index.html">Trang chủ</a>
+			</li>
+			<li>
+				<a href="gioiThieu.html">Giới thiệu</a>
+			</li>
+			<li>
+				<a href="Index.html">Sản phẩm</a>
+				<ul class="sub">
+					<li>
+						<a href="iPhone12Series.html">Iphone 12 series</a>
+						<ul class="sub2">
+							<li>
+								<a href="iPhone12Mini.html">Iphone 12 mini</a>
+							</li>
+							<li>
+								<a href="iPhone12.html">Iphone 12</a>
+							</li>
+							<li>
+								<a href="iPhone12ProMax.html">Iphone 12 Pro Max</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="iPhone11Series.html">Iphone 11 series</a>
+						<ul class="sub2">
+							<li>
+								<a href="iPhone11.html">Iphone 11</a>
+							</li>
+							<li>
+								<a href="iPhone11Pro.html">Iphone 11 Pro</a>
+							</li>
+							<li>
+								<a href="iPhone11ProMax.html">Iphone 11 Pro Max</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="iPhoneXSeries.html">Iphone X series</a>
+						<ul class="sub2">
+							<li>
+								<a href="iPhoneX.html">Iphone X</a>
+							</li>
+							<li>
+								<a href="iPhoneXS.html">Iphone XS</a>
+							</li>
+							<li>
+								<a href="iPhoneXSMax.html">Iphone XS Max</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="GioHang.html">Giỏ hàng</a>
+			</li>
+			<li>
+				<a href="LienHe.html">Liên hệ</a>
+			</li>
+		</ul>
+	</div><!-- 
+	<div id="banner" style="width: 80%; margin: 0 auto">
+		<img src="banner1.jpg" style="width: 100%; border-radius: 5px" >
+	</div> -->
+	<div class="NoiDung">
+		<div class="MenuDoc">
+			<ul class="ListMenuDocGT">
+				<li><a href="gioiThieu.html">Giới thiệu</a></li>
+				<li><a href="csbm.html">Chính sách bảo mật</a></li>
+				<li><a href="csdt.html">Chính sách đổi trả</a></li>
+			</ul>
+		</div>
+		<div class="contentGT">
+			<div class="titleGT">
+				Chính sách bảo mật
+			</div>
+			<div class="detailGT">
+				<p>Tại Samsung Electronics, chúng tôi coi việc bảo vệ thông tin cá nhân của bạn là ưu tiên hàng đầu.</p> 
+
+				<p>Chúng tôi hiểu hoàn toàn rằng thông tin cá nhân của bạn là thuộc về bạn, vì vậy chúng tôi nỗ lực hết sức lưu trữ bảo mật và xử lý cẩn thận thông tin mà bạn chia sẻ với chúng tôi.</p>
+
+				<p>Chúng tôi coi sự tin cậy của bạn có giá trị cao nhất. Vì vậy chúng tôi thu thập lượng thông tin tối thiểu chỉ khi có sự cho phép của bạn và sử dụng thông tin này chỉ cho các mục đích đã dự định. Chúng tôi không cung cấp thông tin cho các bên thứ ba mà không có sự hiểu biết của bạn.</p>
+
+				<p>Tại Samsung Electronics chúng tôi nỗ lực hết sức nhằm đảm bảo khả năng bảo vệ dữ liệu của bạn, bao gồm bảo mật dữ liệu kỹ thuật và quy trình quản lý nội bộ cũng như các biện pháp bảo vệ dữ liệu vật lý. Đặc biệt là chúng tôi đã phát triển một công nghệ mã hóa mạnh dựa trên nền Samsung Knox. Chúng tôi đã áp dụng Samsung Knox trên các hệ thống và sản phẩm của chúng tôi, mang lại sự khác biệt cho chúng tôi trước các công ty khác.</p>
+
+				<p>Chúng tôi phấn đấu cải thiện cuộc sống của bạn bằng cách đưa ra những trải nghiệm số đầy cảm hứng và hấp dẫn. Để thực hiện việc này, sự tin cậy của bạn là điều tối cao và vì vậy chúng tôi sẽ nỗ lực hết sức để bảo vệ thông tin cá nhân của bạn.</p>
+
+				<p>Cảm ơn bạn vẫn tiếp tục quan tâm và ủng hộ chúng tôi.</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="noidung">
+			<table class="itemfooter">
+				<tr class="itemrow">
+					<td class="itemcol">
+						<h3 class="footerheading">Chăm sóc khách hàng</h3>
+						<ul>
+							<li ><a href="">Trung tâm trợ giúp</a></li>
+							<li ><a href="" >S&N Mall</a></li>
+							<li ><a href="" >Hướng dẫn mua hàng</a></li>
+						</ul>
+					</td>
+					<td class="itemcol" >
+						<h3 class="footerheading">Về S&N</h3>
+						<ul >
+							<li ><a href="" >Giới thiệu</a></li>
+							<li ><a href="" >Tuyển dụng</a></li>
+							<li ><a href="" >Điều khoản</a></li>
+						</ul>
+					</td>
+					<td class="itemcol">
+						<h3 class="footerheading">Theo dõi chúng tôi trên</h3>
+						<ul >
+							<li ><a href="https://www.facebook.com/profile.php?id=100007096803730" >Facebook</a></li>
+							<li ><a href="https://www.facebook.com/imslickzz" >Instagram</a></li>
+							<li ><a href="" >LinkIn</a></li>
+
+						</ul>
+						
+					</td>
+					<td class="itemcol">
+						<h3 class="footerheading">Vào cửa hàng trên ứng dụng</h3>
+						<img src="img/ma.png" width="100px" height="100px">
+					</td>
+				</tr>
+				<tr >
+					<td>
+						<center><p style="color:#737373">© 2015 - Bản quyền thuộc về S&N</p></center>
+					</td>
+				</tr>
+			</table>
+		</div>	
+		
+	</footer>
+	</div>
+</body>
+</html>

@@ -1,13 +1,272 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<title>Laptop Asus</title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="shortcut icon" href="img/logo.ico">
+	<style type="text/css">
+		.content{
+			width: 80%;			
+			margin: 0px auto;
+			height: auto;
+		}
+		
+		.item{
+			margin-bottom:20px;
+			margin-right: 5px;
+			margin-left: 5px;
+			width: 23%;
+			/*background-color: yellow;*/
+			float: left;
+			border-radius: 5px;
+			border: 1px solid black;	
+			transition-duration: 0.7s;
+		}
+		.item img{
+			width: 100%;
+		}
+		.item > a{
+			text-decoration: none;
+			color: red;
+			font-size: 20px;
+		}
+		.item:hover{
+			background-color: lightblue;
+			transform:scale(1.2);
+		}
+	</style>
+	<script type="text/javascript">
+		var list= new Array();
+		var result
+
+		list[0] = "img/banner5.jpg";
+		list[1] = "img/banner6.jpg";
+		list[2] = "img/banner7.jpg";
+		list[3] = "img/banner8.jpg";
+		list[4] = "img/banner1.jpg";
+		list[5] = "img/banner2.jpg";
+			
+		function changeImgBanner(){
+			i=Math.floor(Math.random()*list.length);
+			kq='<img src="'+list[i]+ '"style="width: 100%;border-radius: 10px">';
+			document.getElementById("banner").innerHTML=kq;
+			setTimeout(changeImgBanner,2000);
+		}
+	</script>
 </head>
-<body>
-<h1>Hello =)))</h1>
+<body onload="changeImgBanner()">
+	<div class="Social">
+			<div>
+				<img width="200px" src="img/logo.png" alt="" onclick="location.href='Index.html'">
+			</div>
+			<div id="cart" onclick="login();"><img  src="img/cart.svg" alt="" id="imgButton">Giỏ hàng</div>
+			<div id="signin" onclick="login();"><img  src="img/login.svg" alt="" id="imgButton" >Đăng nhập</div>
+			<div id="logout" onclick="dangxuat();"></div>
+			<script>
+				if (localStorage.getItem("NameUser")!=null){
+					document.getElementById("signin").innerHTML
+							='<img src="img/user.png" alt="" id="imgUser">'+localStorage.getItem("NameUser")+''; 
+					document.getElementById("logout").innerText='Logout';
+				}
+			function dangxuat(){
+				localStorage.removeItem("NameUser");
+				location.href="Index.html"
+			}
+			function login(){
+				location.href="login.html"
+			}
+			</script>
+	</div>
+	<div class="header">
+		<div class="Menu">
+			<ul class="root">
+				<li>
+					<a href="Index.html">Trang chủ</a>
+				</li>
+				<li>
+					<a href="gioiThieu.html">Giới thiệu</a>
+				</li>
+				<li>
+					<a href="Index.html">Sản phẩm</a>
+					<ul class="sub">
+						<li>
+							<a href="iPhone12Series.html">Iphone 12 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone12Mini.html">Iphone 12 mini</a>
+								</li>
+								<li>
+									<a href="iPhone12.html">Iphone 12</a>
+								</li>
+								<li>
+									<a href="iPhone12ProMax.html">Iphone 12 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhone11Series.html">Iphone 11 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone11.html">Iphone 11</a>
+								</li>
+								<li>
+									<a href="iPhone11Pro.html">Iphone 11 Pro</a>
+								</li>
+								<li>
+									<a href="iPhone11ProMax.html">Iphone 11 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhoneXSeries.html">Iphone X series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhoneX.html">Iphone X</a>
+								</li>
+								<li>
+									<a href="iPhoneXS.html">Iphone XS</a>
+								</li>
+								<li>
+									<a href="iPhoneXSMax.html">Iphone XS Max</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="LienHe.html">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="Search">
+			<div class="ElementSearch">
+				<form>
+					<input id="inputSearch" type="text" size="20">
+					<input id="btnSearch" type="button"value="Tìm kiếm">
+				  </form>
+			</div>
+		</div>
+			
+	</div>
+	
+		<div id="banner">
+			<img src="banner1.jpg" width="1200px" height ="300px" style="border-radius: 5px" >
+		</div>
+		<div class="content">
+			<div class="title">
+				<strong>SẢN PHẨM NỔI BẬT</strong> 
+			</div>
+			<div class="item">
+				<a href="iPhone12Mini.html">
+					<img src="img/item1.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 Mini - 64GB - Chính hãng VN/A
+					</div>	
+				</a>
+				
+			</div>
+			<div class="item">
+				<a href="iPhone12.html">
+					<img src="img/item2.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 - 64GB - Chính hãng VN/A
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone12ProMax.html">
+					<img src="img/item3.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 Pro - 128GB - Chính hãng VN/A
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone12ProMax.html">
+					<img src="img/item4.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 Pro Max - 128GB - Chính hãng VN/A
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone11.html">
+					<img src="img/item5.png">
+					<div style="text-align: center;">
+						Apple iPhone 11 - 64GB - Chính hãng VN/A (Phiên bản mới)
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone11.html">
+					<img src="img/item6.png">
+					<div style="text-align: center;">
+						Apple iPhone 11 - 128GB - Chính hãng VN/A (Phiên bản mới)
+					</div>	
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone11Pro.html">
+					<img src="img/item7.png">
+					<div style="text-align: center;">
+						Apple iPhone 11 Pro Max - 64GB - Chính hãng VN/A
+					</div>	
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone11ProMax.html">
+					<img src="img/item8.png">
+					<div style="text-align: center;">
+						Apple iPhone 11 Pro Max - 256GB - Chính hãng VN/A
+					</div>	
+				</a>
+			</div>
+
+
+		</div>
+		<footer>
+			<div class="noidung">
+				<table class="itemfooter">
+					<tr class="itemrow">
+						<td class="itemcol">
+							<h3 class="footerheading">Chăm sóc khách hàng</h3>
+							<ul>
+								<li ><a href="">Trung tâm trợ giúp</a></li>
+								<li ><a href="" >S&N Mall</a></li>
+								<li ><a href="" >Hướng dẫn mua hàng</a></li>
+							</ul>
+						</td>
+						<td class="itemcol" >
+							<h3 class="footerheading">Về S&N</h3>
+							<ul >
+								<li ><a href="" >Giới thiệu</a></li>
+								<li ><a href="" >Tuyển dụng</a></li>
+								<li ><a href="" >Điều khoản</a></li>
+							</ul>
+						</td>
+						<td class="itemcol">
+							<h3 class="footerheading">Theo dõi chúng tôi trên</h3>
+							<ul >
+								<li ><a href="https://www.facebook.com/profile.php?id=100007096803730" >Facebook</a></li>
+								<li ><a href="https://www.facebook.com/imslickzz" >Instagram</a></li>
+								<li ><a href="" >LinkIn</a></li>
+	
+							</ul>
+							
+						</td>
+						<td class="itemcol">
+							<h3 class="footerheading">Vào cửa hàng trên ứng dụng</h3>
+							<img src="img/ma.png" width="100px" height="100px">
+						</td>
+					</tr>
+					<tr >
+						<td>
+							<center><p style="color:#737373">© 2015 - Bản quyền thuộc về S&N</p></center>
+						</td>
+					</tr>
+				</table>
+			</div>	
+			
+		</footer>
 </body>
 </html>

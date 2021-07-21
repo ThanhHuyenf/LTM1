@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S&N</title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="shortcut icon" href="img/logo.ico">
+	<style type="text/css">
+		.content{
+			width: 80%;			
+			margin: 20px auto;
+			height: auto;
+		}
+		.Search{
+			width: 80%;
+			margin: 10px auto;
+		}
+		.ElementSearch{
+			width: 100%;
+			/*background-color: red;*/
+			/*margin: 100px auto;*/
+		}
+		.ElementSearch form{
+			width: 50%;
+			margin: 0px auto;
+		}
+		.content .ImageItem{
+			width: 30%;
+			height: 500px;
+			
+			float: left;
+			border: 5px solid black;
+			border-radius: 25px;
+			padding: 10px;
+		}
+		.content .DetailItem{
+			width: 65%;
+			height: 500px;
+			float: right;
+			font-size: 20px;
+			text-align: justify;
+		}
+		.content .DetailItem > div{
+			margin-bottom: 10px;
+		}
+		.titleNameItem{
+			font-family: Quicksand;
+			font-size: 45px;
+			color: black;
+			font-weight: solid;
+			margin-bottom: 10px;
+		}
+		.Gia{
+			width: 80%;
+			border: 3px solid black;
+			padding: 10px;
+			background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+			background: url("img/bgGia.gif") no-repeat scroll 86% 12% rgba(0,0,0,0);
+		}
+		.CauHinhSP{
+			text-indent: 30px;
+			line-height: 1.8;
+		}
+		.divAddItem{
+			width: 100%;
+			height: 100px;
+
+		}
+		#addItem{
+			margin: 0px auto;
+			display: block;
+			width: 80%;
+			height: 80px;
+			font-family: Quicksand;
+			color: black;
+			font-size: 20px;
+			background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+			border-radius: 15px;
+		}
+		#addItem:hover{
+			background-color: orange;
+		}
+
+	</style>
+	<script type="text/javascript">
+		var list= new Array();
+		var result
+		list[0] = "img/iphone12mini/1.jpg";
+		list[1] = "img/iphone12mini/2.jpg";
+		list[2] = "img/iphone12mini/3.jpg";
+		list[3] = "img/iphone12mini/4.jpg";
+			
+		function changeImgItem(){
+			
+			i=Math.floor(Math.random()*list.length);
+			kq='<img src="'+list[i]+ '"style="width: 100%;height: 500px">';
+			document.getElementById("imgItem").innerHTML=kq;
+			setTimeout(changeImgItem,2000);
+		}
+	</script>
+</head>
+
+<body onload="changeImgItem()">
+	<div class="Social">
+		<div id="signin" onclick="login();"><img src="img/user.png" alt="" id="imgUser">Login</div>
+		<div id="logo"onclick="location.href='Index.html'">Laptop Asus</div>
+		<div id="logout" onclick="dangxuat();">Logout</div>
+		<script>
+			if (localStorage.getItem("NameUser")!=null){
+		document.getElementById("signin").innerHTML
+		='<img src="img/user.png" alt="" id="imgUser">'+localStorage.getItem("NameUser")+''; 
+		}
+		function dangxuat(){
+			localStorage.removeItem("NameUser");
+			location.href="Index.html"
+		}
+		function login(){
+			location.href="login.html"
+		}
+		</script>
+	</div>
+		<div class="Menu">
+			<ul class="root">
+				<li>
+					<a href="Index.html">Trang chủ</a>
+				</li>
+				<li>
+					<a href="gioiThieu.html">Giới thiệu</a>
+				</li>
+				<li>
+					<a href="Index.html">Sản phẩm</a>
+					<ul class="sub">
+						<li>
+							<a href="iPhone12Series.html">Iphone 12 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone12Mini.html">Iphone 12 mini</a>
+								</li>
+								<li>
+									<a href="iPhone12.html">Iphone 12</a>
+								</li>
+								<li>
+									<a href="iPhone12ProMax.html">Iphone 12 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhone11Series.html">Iphone 11 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone11.html">Iphone 11</a>
+								</li>
+								<li>
+									<a href="iPhone11Pro.html">Iphone 11 Pro</a>
+								</li>
+								<li>
+									<a href="iPhone11ProMax.html">Iphone 11 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhoneXSeries.html">Iphone X series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhoneX.html">Iphone X</a>
+								</li>
+								<li>
+									<a href="iPhoneXS.html">Iphone XS</a>
+								</li>
+								<li>
+									<a href="iPhoneXSMax.html">Iphone XS Max</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="GioHang.html">Giỏ hàng</a>
+				</li>
+				<li>
+					<a href="LienHe.html">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="Search">
+			<div class="ElementSearch">
+				<form>
+					<input type="text" size="50" style="height: 38px;border-radius: 8px;  padding-left: 50px" name="">
+			        <input type="button" name="" style="width: 77px;height: 42px;border-radius: 5px;" value="Tìm kiếm">
+			      </form>
+	        </div>
+		</div>
+		<div class="content">
+			<div class="ImageItem">
+				<div id="imgItem">
+					<img src="img/iphone12mini/1.jpg" style="width: 100%;height: 500px">	
+				</div>
+				
+				<div style="margin-top: 20px;text-align: center;">Hình ảnh sản phẩm</div>
+				<div style="min-height: 20px"></div>
+				<div class="divAddItem">
+					<input id="addItem" type="button" value="Thêm vào giỏ hàng" onclick="addSP('iPhone 12 mini','1','30000000')">
+				</div>
+			</div>
+			<div class="DetailItem">
+				<div class="titleNameItem">
+					Iphone 12 Mini
+				</div>
+				<div class="Gia">
+					Giá: <font style="font-size: 45px;color: red;font:600 55px Helvetica;margin-left: 30px">30.000.000 <u>đ</u></font>
+				</div>
+				<div class="CauHinhSP">
+					<div>
+						Ở phía mặt trước, iPhone 12 Mini 64GB chính hãng VN/A vẫn sở hữu một thiết kế tràn viền tai thỏ như các thế hệ tiền nhiệm, với các phần viền benzel dường như đã được làm mỏng hơn. Nhưng đó không phải là tất cả những gì mà iPhone 12 Mini có. Toàn bộ các phần cạnh của iPhone 12 Mini nói riêng và thế hệ iPhone 12 năm nay nói chung đều đã được Apple làm mới lại, vắt phẳng vuông thành sắc cạnh, cực kì hiện đại, sang trọng và tinh tế. Mặt lưng của iPhone 12 Mini được bảo vệ bởi một lớp kính cường lực mà Apple gọi là Ceramic Shield giúp máy trở nên bền bỉ và cứng cáp hơn rất nhiều. iPhone 12 Mini sẽ có tất cả 5 phiên bản màu bao gồm Đen, Trắng, Xanh Lam, Xanh Lục và Đỏ.
+					</div>
+					<div>
+						Công nghệ màn hình OLED Super Retina XDR mang đến cho iPhone 12 Mini chất lượng hiển thị phải nói là xuất sắc bậc nhất. Độ phân giải màn hình Full HD+ 2,340 x 1,080 cung cấp mật độ điểm ảnh siêu khủng lên tới 476ppi, giúp người dùng có thể thoải mái trải nghiệm những tác vụ giải trí hàng ngày như xem phim hoặc chơi game.
+					</div>
+					<div>
+						iPhone 12 Mini vẫn sở hữu một hệ thống camera kép tương tự như iPhone 11 trước đây nhưng các cảm biến đã được phóng lớn ra một chút, giúp thu được nhiều ánh sáng hơn, từ đó ảnh cho ra cũng có chất lượng tốt hơn. Cụ thể, cụm camera kép của máy bao gồm một camera chính góc rộng và một camera góc siêu rộng cho trường nhìn lên tới 120 độ; cả hai đều có cùng độ phân giải 12MP. Các thuật toán xử lý cũng được Apple nâng cấp trong các chế độ như chụp chân dung Portrait, chụp chân dung Highkey. Chế độ chụp đêm Night Mode cũng hỗ trợ chụp đêm tốt hơn so với iPhone 11.
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="test.js"></script>
+</body>
+</html>

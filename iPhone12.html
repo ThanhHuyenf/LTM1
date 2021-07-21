@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S&N</title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="shortcut icon" href="img/logo.ico">
+	<style type="text/css">
+		.content{
+			width: 80%;			
+			margin: 20px auto;
+			height: auto;
+		}
+		.Search{
+			width: 80%;
+			margin: 10px auto;
+		}
+		.ElementSearch{
+			width: 100%;
+			/*background-color: red;*/
+			/*margin: 100px auto;*/
+		}
+		.ElementSearch form{
+			width: 50%;
+			margin: 0px auto;
+		}
+		.content .ImageItem{
+			width: 30%;
+			height: 500px;
+			
+			float: left;
+			border: 5px solid black;
+			border-radius: 25px;
+			padding: 10px;
+		}
+		.content .DetailItem{
+			width: 65%;
+			height: 500px;
+			float: right;
+			font-size: 20px;
+			text-align: justify;
+		}
+		.content .DetailItem > div{
+			margin-bottom: 10px;
+		}
+		.titleNameItem{
+			font-family: Quicksand;
+			font-size: 45px;
+			color: black;
+			font-weight: solid;
+			margin-bottom: 10px;
+		}
+		.Gia{
+			width: 80%;
+			border: 3px solid black;
+			padding: 10px;
+			background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+			background: url("img/bgGia.gif") no-repeat scroll 86% 12% rgba(0,0,0,0);
+		}
+		.CauHinhSP{
+			text-indent: 30px;
+			line-height: 1.8;
+		}
+		.divAddItem{
+			width: 100%;
+			height: 100px;
+
+		}
+		#addItem{
+			margin: 0px auto;
+			display: block;
+			width: 80%;
+			height: 80px;
+			font-family: Quicksand;
+			color: black;
+			font-size: 20px;
+			background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+			border-radius: 15px;
+		}
+		#addItem:hover{
+			background-color: orange;
+		}
+
+	</style>
+	<script type="text/javascript">
+		var list= new Array();
+		var result
+		list[0] = "img/iphone12/1.jpg";
+		list[1] = "img/iphone12/2.jpg";
+		list[2] = "img/iphone12/3.jpg";
+		list[3] = "img/iphone12/4.jpg";
+			
+		function changeImgItem(){
+			
+			i=Math.floor(Math.random()*list.length);
+			kq='<img src="'+list[i]+ '"style="width: 100%;height: 500px">';
+			document.getElementById("imgItem").innerHTML=kq;
+			setTimeout(changeImgItem,2000);
+		}
+	</script>
+</head>
+
+<body onload="changeImgItem()">
+	<div class="Social">
+		<div id="signin" onclick="login();"><img src="img/user.png" alt="" id="imgUser">Login</div>
+		<div id="logo"onclick="location.href='Index.html'">Laptop Asus</div>
+		<div id="logout" onclick="dangxuat();">Logout</div>
+		<script>
+			if (localStorage.getItem("NameUser")!=null){
+		document.getElementById("signin").innerHTML
+		='<img src="img/user.png" alt="" id="imgUser">'+localStorage.getItem("NameUser")+''; 
+		}
+		function dangxuat(){
+			localStorage.removeItem("NameUser");
+			location.href="Index.html"
+		}
+		function login(){
+			location.href="login.html"
+		}
+		</script>
+	</div>
+		<div class="Menu">
+			<ul class="root">
+				<li>
+					<a href="Index.html">Trang chủ</a>
+				</li>
+				<li>
+					<a href="gioiThieu.html">Giới thiệu</a>
+				</li>
+				<li>
+					<a href="Index.html">Sản phẩm</a>
+					<ul class="sub">
+						<li>
+							<a href="iPhone12Series.html">Iphone 12 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone12Mini.html">Iphone 12 mini</a>
+								</li>
+								<li>
+									<a href="iPhone12.html">Iphone 12</a>
+								</li>
+								<li>
+									<a href="iPhone12ProMax.html">Iphone 12 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhone11Series.html">Iphone 11 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone11.html">Iphone 11</a>
+								</li>
+								<li>
+									<a href="iPhone11Pro.html">Iphone 11 Pro</a>
+								</li>
+								<li>
+									<a href="iPhone11ProMax.html">Iphone 11 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhoneXSeries.html">Iphone X series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhoneX.html">Iphone X</a>
+								</li>
+								<li>
+									<a href="iPhoneXS.html">Iphone XS</a>
+								</li>
+								<li>
+									<a href="iPhoneXSMax.html">Iphone XS Max</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="GioHang.html">Giỏ hàng</a>
+				</li>
+				<li>
+					<a href="LienHe.html">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="Search">
+			<div class="ElementSearch">
+				<form>
+					<input type="text" size="50" style="height: 38px;border-radius: 8px;  padding-left: 50px" name="">
+			        <input type="button" name="" style="width: 77px;height: 42px;border-radius: 5px;" value="Tìm kiếm">
+			      </form>
+	        </div>
+		</div>
+		<div class="content">
+			<div class="ImageItem">
+				<div id="imgItem">
+					<img src="img/iphone12mini/1.jpg" style="width: 100%;height: 500px">	
+				</div>
+				
+				<div style="margin-top: 20px;text-align: center;">Hình ảnh sản phẩm</div>
+				<div style="min-height: 20px"></div>
+				<div class="divAddItem">
+					<input id="addItem" type="button" value="Thêm vào giỏ hàng" onclick="addSP('iPhone 12','1','27000000')">
+				</div>
+			</div>
+			<div class="DetailItem">
+				<div class="titleNameItem">
+					Iphone 12
+				</div>
+				<div class="Gia">
+					Giá: <font style="font-size: 45px;color: red;font:600 55px Helvetica;margin-left: 30px">27.000.000 <u>đ</u></font>
+				</div>
+				<div class="CauHinhSP">
+					<div>
+						Vào ngày 13/10 vừa qua, Apple đã chính thức cho ra mắt thế hệ iPhone 12 mới với 4 phiên bản, và trong đó mẫu iPhone 12 tiêu chuẩn, với nhiều cải tiến về cả bên ngoài lẫn bên trong, hứa hẹn sẽ lại tiếp tục nối tiếp sự thành công từ chiếc iPhone 11 tiền nhiệm.
+					</div>
+					<div>
+						Nhắc tới Apple, người dùng sẽ luôn nghĩ tới những thiết bị iPhone đẳng cấp, mang trên mình một thiết kế vô cùng sang trọng, hiện đại và thời thượng. Và iPhone 12 Series của năm nay cũng không phải là một ngoại lệ. Mẫu iPhone 12 64GB sở hữu một thiết kế đã được “lột xác” hoàn toàn so với các thế hệ tiền nhiệm trước đây với cạnh được vát phẳng, vuông thành sắc cạnh, mang tới một cảm giác cực kì bền bỉ và chắc chắn. Thiết kế này khiến cho người dùng có thể dễ dàng liên tưởng tới những mẫu iPhone huyền thoại trước đây đã làm nên tên tuổi của Apple như iPhone 4 hoặc iPhone 5.
+					</div>
+					<div>
+						Màn hình của iPhone 12 64GB được trang bị công nghệ tấm nền OLED Super Retina XDR, mang lại cho iPhone 12 một chất lượng hiển thị xuất sắc nhất từ trước đến nay. Đi cùng với đó là độ phân giải Full HD+ 2,532 x 1,170; cho mật độ điểm ảnh cực tốt lên tới 460ppi. Với màn hình được nâng cấp và cải tiến như vậy, những vị chủ nhân sở hữu iPhone 12 có thể thoải mái thưởng thức những bộ phim hoặc chơi game mà không cần phải lo nghĩ về bất cứ điều gì.
+					</div>
+					<div>
+						Sở hữu một vẻ bên ngoài sang trọng, bóng bẩy và lịch lãm là vậy, thế nhưng iPhone 12 64GB lại mang trong mình một sức mạnh cực kì khủng khiếp, vượt trội hơn tất cả những mẫu smartphone đang có mặt trên thị trường. Tất cả là nhờ có bộ vi xử lý Apple A14 Bionic được sản xuất trên tiến trình 5nm mới nhất, không chỉ manh mà còn tiết kiệm điện năng tới tối đa. Con chip này được đánh giá là bộ vi xử lý mạnh mẽ nhất, nhanh nhất hiện nay với cấu tạo từ 6 lõi CPU, 11,8 tỷ bóng bán dẫn, 4 lõi GPU mới, và nhanh hơn A13 Bionic tới 40%. Công nghệ kết nối mạng 5G mới cùng với Wi-Fi 6 cũng đã được đưa vào iPhone 12, hứa hẹn sẽ mang tới một khả năng kết nối Internet vượt trội hoàn toàn.
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S&N</title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="shortcut icon" href="img/logo.ico">
+	<style type="text/css">
+		.content{
+			width: 80%;			
+			margin: 0px auto;
+			height: auto;
+		}
+		.Search{
+			width: 80%;
+			margin: 10px auto;
+		}
+		.ElementSearch{
+			width: 100%;
+			/*background-color: red;*/
+			/*margin: 100px auto;*/
+		}
+		.ElementSearch form{
+			width: 50%;
+			margin: 0px auto;
+		}
+		.item{
+			margin-bottom:20px;
+			margin-right: 5px;
+			margin-left: 5px;
+			width: 23%;
+			/*background-color: yellow;*/
+			float: left;
+			border-radius: 5px;
+			border: 1px solid black;	
+			transition-duration: 0.7s;
+		}
+		.item img{
+			width: 100%;
+		}
+		.item > a{
+			text-decoration: none;
+			color: red;
+			font-size: 20px;
+		}
+		.item:hover{
+			background-color: lightblue;
+			transform:scale(1.2);
+		}
+	</style>
+	<script type="text/javascript">
+		var list= new Array();
+		var result
+		list[0] = "img/banner1.jpg";
+		list[1] = "img/banner2.jpg";
+		list[2] = "img/banner3.jpg";
+		list[3] = "img/banner4.jpg";
+			
+		function changeImgBanner(){
+			i=Math.floor(Math.random()*list.length);
+			kq='<img src="'+list[i]+ '"style="width: 100%;border-radius: 10px">';
+			document.getElementById("banner").innerHTML=kq;
+			setTimeout(changeImgBanner,2000);
+		}
+	</script>
+</head>
+<body onload="changeImgBanner()">
+	<div class="Social">
+		<div id="signin" onclick="login();"><img src="img/user.png" alt="" id="imgUser">Login</div>
+		<div id="logo"onclick="location.href='Index.html'">Laptop Asus</div>
+		<div id="logout" onclick="dangxuat();">Logout</div>
+		<script>
+			if (localStorage.getItem("NameUser")!=null){
+		document.getElementById("signin").innerHTML
+		='<img src="img/user.png" alt="" id="imgUser">'+localStorage.getItem("NameUser")+''; 
+		}
+		function dangxuat(){
+			localStorage.removeItem("NameUser");
+			location.href="Index.html"
+		}
+		function login(){
+			location.href="login.html"
+		}
+		</script>
+	</div>
+		<div class="Menu">
+			<ul class="root">
+				<li>
+					<a href="Index.html">Trang chủ</a>
+				</li>
+				<li>
+					<a href="gioiThieu.html">Giới thiệu</a>
+				</li>
+				<li>
+					<a href="Index.html">Sản phẩm</a>
+					<ul class="sub">
+						<li>
+							<a href="iPhone12Series.html">Iphone 12 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone12Mini.html">Iphone 12 mini</a>
+								</li>
+								<li>
+									<a href="iPhone12.html">Iphone 12</a>
+								</li>
+								<li>
+									<a href="iPhone12ProMax.html">Iphone 12 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhone11Series.html">Iphone 11 series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhone11.html">Iphone 11</a>
+								</li>
+								<li>
+									<a href="iPhone11Pro.html">Iphone 11 Pro</a>
+								</li>
+								<li>
+									<a href="iPhone11ProMax.html">Iphone 11 Pro Max</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="iPhoneXSeries.html">Iphone X series</a>
+							<ul class="sub2">
+								<li>
+									<a href="iPhoneX.html">Iphone X</a>
+								</li>
+								<li>
+									<a href="iPhoneXS.html">Iphone XS</a>
+								</li>
+								<li>
+									<a href="iPhoneXSMax.html">Iphone XS Max</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="GioHang.html">Giỏ hàng</a>
+				</li>
+				<li>
+					<a href="LienHe.html">Liên hệ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="Search">
+			<div class="ElementSearch">
+				<form>
+					<input type="text" size="50" style="height: 38px;border-radius: 8px;  padding-left: 50px" name="">
+			        <input type="button" name="" style="width: 77px;height: 42px;border-radius: 5px;" value="Tìm kiếm">
+			      </form>
+	        </div>
+		</div>
+		<div id="banner" style="width: 80%; margin: 0 auto">
+			<img src="banner1.jpg" style="width: 100%; border-radius: 5px" >
+		</div>
+		<div class="content">
+			<div class="title">
+				APPLE - IPHONE 12 SERIES
+			</div>
+			<div class="item">
+				<a href="iPhone12Mini.html">
+					<img src="img/item1.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 Mini - 64GB - Chính hãng VN/A
+					</div>	
+				</a>
+				
+			</div>
+			<div class="item">
+				<a href="iPhone12.html">
+					<img src="img/item2.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 - 64GB - Chính hãng VN/A
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone12Pro.html">
+					<img src="img/item3.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 Pro - 128GB - Chính hãng VN/A
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="iPhone12ProMax.html">
+					<img src="img/item4.png">
+					<div style="text-align: center;">
+						Apple iPhone 12 Pro Max - 128GB - Chính hãng VN/A
+					</div>
+				</a>
+			</div>
+
+		</div>
+	
+</body>
+</html>
