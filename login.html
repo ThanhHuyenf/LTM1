@@ -32,10 +32,9 @@
         }
         form .field{
             position: relative;
-            border-bottom: 1px solid black;
         }
         .field+ .field{
-            margin-top: 25px;
+            margin-top: 15px;
         }
         .field input{
             width: 100%;
@@ -45,32 +44,16 @@
             border: none;
             outline: none;
             background: none;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
         }
         .field label{
-            position: absolute;
-            top: 50%;
-            left: 5px;
+            margin-top: 15px;
             color: rgba(0, 0, 0, 0.4);
             transform: translateY(-50%);
             font-size: 16px;
             pointer-events: none;
             transition: 0.5s;
-        }
-        .field span::before{
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0px;
-            width: 0%;
-            height: 1px;
-            background: blue;
-        }
-        .field input:focus ~ label, .field input:valid ~ label {
-            top: -5px;
-            color: blue;
-        }
-        .field input:focus ~ span::before, .field input:valid ~ span::before{
-            width: 100%;
         }
         input[type="submit"]{
             cursor: pointer;
@@ -103,12 +86,10 @@
     <form method="post">
         <div class="field">
             <input type="text" class="acc">
-            <span></span>
             <label>Tên đăng nhập</label>
         </div>
         <div class="field">
             <input type="password" class="pass">
-            <span></span>
             <label>Mật khẩu</label>
         </div>
         <input type="submit" value="Đăng nhập" onclick="login()">
