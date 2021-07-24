@@ -1,113 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>S&N</title>
-	<link rel="shortcut icon" href="img/logo.ico">
-	<style type="text/css">
-		.content{
-			width: 30%;
-			margin:150px auto;
-			min-height: 270px;
-			background-color: #ff549766;
+	<meta charset="UTF-8">
+	<title>Sign in</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: serif;
+			background: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			height: 100vh;
 		}
-		.title{
-			width: 100%;
-			font-size: 45px;
-			text-align: center;
-			font-family:monospace;
-			height: auto;
-			margin-bottom: 20px;
-		}
-		.detail{
-			width: 100%;
-			text-align: center;
-		}
-		.detail > form{
-			width: 100%;
-			margin: 0 auto;
-			align-content: center;
-		}
-		.detail > form > input{
-			text-indent: 30px;
-			width: 90%;
-			height: 40px;
-			margin-bottom: 10px;
-			color:darkviolet;
-			border-radius: 10px;
-			border: 0px;
-			font-size: 20px;
-		}
-		#login, #signin, #home{
-			text-indent: 0px;;
-			width: 70%;
-			height: 45px;
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 400px;
+			background: white;
 			border-radius: 15px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
 		}
-		#login:hover{
-			background-color: orange;
-			border-radius: 10px;
-			border: 0px;
+		.container h1 {
+			text-align: center;
+			padding-bottom: 20px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 		}
-		#signin:hover{
-			background-color:indianred;
-			border-radius: 10px;
-			border: 0px;
+		.container .login_card{
+			box-sizing: border-box;
+			padding: 0 40px;
 		}
-		#home:hover{
-			background-color:orange;
-			border-radius: 10px;
-			border: 0px;
+		.login_card .field{
+			position: relative;
+		}
+		.field+ .field{
+			margin-top: 15px;
+		}
+		.field input{
+			width: 100%;
+			padding: 0 5px;
+			height: 40px;
+			font-size: 16px;
+			border: none;
+			outline: none;
+			background: none;
+			border-bottom: 1px solid black;
+			margin-bottom: 10px;
+		}
+		.field label{
+			margin-top: 15px;
+			color: rgba(0, 0, 0, 0.4);
+			transform: translateY(-50%);
+			font-size: 14px;
+			pointer-events: none;
+			transition: 0.5s;
+		}
+		.submit_login{
+			box-sizing: border-box;
+			cursor: pointer;
+			width: 100%;
+			height: 40px;
+			background: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+			color: black;
+			border: none;
+			outline: none;
+			margin-top: 35px;
+			font-size: 20px;
+			text-align: center;
+			padding-top: 10px ;
+		}
+		.signup{
+			margin: 30px 0px;
+			text-align: center;
+			font-size: 16px;
+			color: rgba(0,0,0, 0.5);
+		}
+		.signup a{
+			text-decoration: none;
+			margin-left: 6px;
+		}
+		.signup a:hover {
+			text-decoration: underline;
 		}
 	</style>
 </head>
 <body>
-	<div class="content">
-		<div class="title">Sign in</div>
-		<div class="detail">
-			<form>
-				<input type="text" name="" placeholder="Username" id="userSignIn"><br>
-				<input type="password" name="" placeholder="Password" id="passSignIn1"><br>
-				<input type="password" name="" placeholder="Confirm password" id="passSignIn2"><br>
-				<input type="button" name="" value="Sign in" id="signin" onclick="check();"><br>
-				<input type="button" value="Back to home" id="home" onclick="goHome();"><br>
-				<input type="button" value="Back to login" id="login" onclick="goLogin();"><br>
-				<script type="text/javascript">
-					function check(){
-						var user=document.getElementById("userSignIn");
-						var pass1=document.getElementById("passSignIn1");
-						var pass2=document.getElementById("passSignIn2");
-						
-							if (pass1.value.length<6){
-								alert("Mật khẩu phải có ít nhất 6 ký tự");
-							}
-							else{
-								if (pass1.value!=pass2.value){
-									alert("Mật khẩu xác nhận lại không giống");
-								}
-								else{
-									if (localStorage.getItem(user.value)==null){
-										id=user.value;
-										pass=pass2.value;
-										localStorage.setItem(id,pass1.value);
-										alert("Đăng kí thành công");
-										goLogin();
-									}
-									else{
-										alert("Tài khoản này đã được đăng kí! ")
-									}
-								}
-							}
-						
-					}
-					function goHome(){
-						location.href='Index.html';
-					}
-					function goLogin(){
-						location.href='login.html'
-					}
-				</script>
-			</form>
+<div class="container">
+	<h1>Đăng ký</h1>
+	<div class="login_card">
+		<div class="field">
+			<input type="text" class="sign__acc">
+			<label>Tên đăng nhập</label>
+		</div>
+		<div class="field">
+			<input type="password" class="sign__pass">
+			<label>Mật khẩu (Tối thiểu 6 ký tự)</label>
+		</div>
+		<div class="field">
+			<input type="password" class="sign__repass">
+			<label>Nhập lại mật khẩu</label>
+		</div>
+		<div class="submit_login" onclick="checkSignin()">Đăng ký</div>
+		<div class="signup">
+			Đã có tài khoản ?
+			<a href="login.html">Đăng nhập</a>
+			<br>
+			<a href="index.html">Trang chủ</a>
 		</div>
 	</div>
+</div>
+<script src="js/login.js"></script>
 </body>
 </html>
