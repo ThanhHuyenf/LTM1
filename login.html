@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Log in</title>
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
             font-family: serif;
             background: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
             height: 100vh;
         }
+        
         .container {
             position: absolute;
             top: 50%;
@@ -21,22 +23,27 @@
             border-radius: 15px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
         }
+        
         .container h1 {
             text-align: center;
             padding-bottom: 20px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         }
-        .container .login-card{
+        
+        .container .login-card {
             box-sizing: border-box;
             padding: 0 40px;
         }
-        .login-card .field{
+        
+        .login-card .field {
             position: relative;
         }
-        .field+ .field{
+        
+        .field+.field {
             margin-top: 15px;
         }
-        .field input{
+        
+        .field input {
             width: 100%;
             padding: 0 5px;
             height: 40px;
@@ -47,7 +54,8 @@
             border-bottom: 1px solid black;
             margin-bottom: 10px;
         }
-        .field label{
+        
+        .field label {
             margin-top: 15px;
             color: rgba(0, 0, 0, 0.4);
             transform: translateY(-50%);
@@ -55,7 +63,8 @@
             pointer-events: none;
             transition: 0.5s;
         }
-        .submit_login{
+        
+        .submit_login {
             box-sizing: border-box;
             cursor: pointer;
             width: 100%;
@@ -67,42 +76,47 @@
             margin-top: 35px;
             font-size: 20px;
             text-align: center;
-            padding-top: 10px ;
+            padding-top: 10px;
         }
-       .signup{
-           margin: 30px 0px;
-           text-align: center;
-           font-size: 16px;
-           color: rgba(0,0,0, 0.5);
-       }
-       .signup a{
-           text-decoration: none;
-       }
-       .signup a:hover {
-           text-decoration: underline;
-       }
+        
+        .signup {
+            margin: 30px 0px;
+            text-align: center;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .signup a {
+            text-decoration: none;
+        }
+        
+        .signup a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
-<div class="container">
-   <h1>Đăng nhập</h1>
-    <div class="login-card">
-        <div class="field">
-            <input type="text" class="acc">
-            <label>Tên đăng nhập</label>
-        </div>
-        <div class="field">
-            <input type="password" class="pass">
-            <label>Mật khẩu</label>
-        </div>
-        <div class="submit_login" onclick="submitlogin()">Đăng nhập</div>
-        <div class="signup">
-            Bạn chưa có tài khoản?
-            <a href="signin.html">Đăng ký</a>
-            <br><a href="index.html">Trang chủ</a>
+    <div class="container">
+        <h1>Đăng nhập</h1>
+        <div class="login-card">
+            <div class="field">
+                <input type="text" class="username">
+                <label>Tên đăng nhập</label>
+            </div>
+            <div class="field">
+                <input type="password" class="password">
+                <label>Mật khẩu</label>
+            </div>
+            <div class="submit_login" onclick="submitlogin()">Đăng nhập</div>
+            <div class="signup">
+                Bạn chưa có tài khoản?
+                <a href="signin.html">Đăng ký</a>
+                <br><a href="index.html">Trang chủ</a>
+            </div>
         </div>
     </div>
-</div>
-<script src="js/login.js"></script>
+    <script src="js/login.js"></script>
 </body>
+
 </html>

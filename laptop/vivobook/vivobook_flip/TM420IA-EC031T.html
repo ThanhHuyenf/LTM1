@@ -7,13 +7,13 @@
     <link rel="shortcut icon" href="../../../img/logo.ico">
 </head>
 
-<body onload="changeImgBanner()">
+<body>
     <button onclick="topFunction()" id="btnUp" title="Go to top"><img src="../../../img/icon/up.svg" width="30px" alt=""></button>
     <div class="header">
-        <img width="200px" src="../../../img/logo.png" alt="" onclick="location.href='Index.html'">
-        <div id="cart" onclick="login();"><img src="../../../img/button/cart.svg" alt="" class="btn">Giỏ hàng (<span class="total-count"></span>)</div>
-        <div id="signin" onclick="login();"><img src="../../../img/button/login.svg" alt="" class="btn">Đăng nhập</div>
-        <div id="logout" onclick="logout();"></div>
+        <img id="backIndex" width="200px" src="../../../img/logo.png" alt="" onclick="location.href='../../../index.html'">
+        <div id="cart" onclick="showCart()"><img src="../../../img/button/cart.svg" alt="" class="btn">Giỏ hàng (<span class="total-cart"></span>)</div>
+        <div id="signin" onclick="location.href='../../../login.html';"><img src="../../../img/button/login.svg" alt="" class="btn">Đăng nhập</div>
+        <div id="signout" onclick="logout();" style="display: none;"><img src="../../../img/button/logout.svg" alt="" class="btn">Đăng xuất</div>
     </div>
     <div class="taskbar">
         <div class="menu">
@@ -108,44 +108,35 @@
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="cart">
-                            <div class="cart-title"><strong>Có 1 sản phẩm trong giỏ hàng</strong>
-                                <button class="btn clear-cart">Clear</button>
+                            <div class="cart-title"><strong>Có <span class="total-cart"></span> sản phẩm trong giỏ hàng</strong>
+                                <button class="btn clear-cart" onclick="clearItem()">Clear</button>
                             </div>
                             <div class="cart-info">
-                                <img class="cart-img" src="../../../img/vivobook/vivobook_flip/TM420IA-EC031T/1.jpg" width="100px">
-                                <div class="item-detail">
-                                    <div class="item-tilte"><strong>Asus VivoBook Flip 14 TM420IA-EC031T</strong></div>
-                                    <div class="item-qty">
-                                        <button class="btn-qty"><img src="../../../img/button/minus.svg" alt=""></button>
-                                        <input type="text" readonly="" class="item-input" value="1">
-                                        <button class="btn-qty"><img src="../../../img/button/plus.svg" alt=""></button>
-                                    </div>
-                                    <div class="item-price">16.790.000</div>
-                                    <div class="item-del">
-                                        <button class="btn-del"><img src="../../../img/button/delete.svg" alt=""></button>
-                                    </div>
-                                </div>
                             </div>
                             <div class="cart-total">
                                 <table>
                                     <tr>
                                         <td>Tổng tiền:</td>
-                                        <td align="right">1.000.000</td>
+                                        <td id="sum" align="right">0</td>
                                     </tr>
                                     <tr>
                                         <td>Giảm:</td>
-                                        <td align="right">1.000.000</td>
+                                        <td id="sale" align="right">0</td>
                                     </tr>
                                     <tr>
                                         <td>Cần thanh toán:</td>
-                                        <td align="right">1.000.0000000</td>
+                                        <td id="pay" align="right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td align="right"><button id="btn-pay" onclick="payItem()">Thanh toán</button></td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-secondary add-to-card" onclick="addItem('Asus VivoBook Flip 14 TM420IA-EC031T','1','16.790.000')">Thêm vào giỏ</button>
+                <button class="btn btn-secondary" onclick="addItem('Asus VivoBook Flip 14 TM420IA-EC031T','1','16.790.000','../../../img/vivobook/vivobook_flip/TM420IA-EC031T/1.jpg')">Thêm vào giỏ</button>
             </div>
             <div class=" info ">
                 <table>
@@ -279,9 +270,8 @@
     </footer>
 </body>
 <script src="../../../js/uptotop.js"></script>
-<script src="../../../js/log.js"></script>
 <script src="../../../js/showmore.js"></script>
-<script src="../../../js/buynow.js"></script>
+<script src="../../../js/login.js"></script>
 <script src="../../../js/cart.js"></script>
 
 </html>

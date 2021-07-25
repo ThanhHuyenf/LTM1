@@ -156,7 +156,8 @@
     cursor: pointer;
 }
 
-#signin {
+#signin,
+#signout {
     height: 50px;
     margin-right: 1%;
     width: 15%;
@@ -182,6 +183,7 @@
 }
 
 #signin:hover,
+#signout:hover,
 #cart:hover {
     transform: scale(1.1);
 }
@@ -627,4 +629,11 @@ footer {
     color: #fff;
     background-color: #bb2d3b;
     border-color: #b02a37
+}
+
+#btn-pay {
+    background-color: #d9e4f5;
+    background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+    border-color: #d9e4f5;
+    padding: 10px;
 }
