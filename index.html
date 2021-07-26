@@ -8,13 +8,14 @@
     <script src="js/banner.js"></script>
 </head>
 
-<body onload="changeImgBanner()">
+<body onload="changeImg()">
     <button onclick="topFunction()" id="btnUp" title="Go to top"><img src="img/icon/up.svg" width="30px" alt=""></button>
     <div class="header">
-        <img width="200px" src="img/logo.png" alt="" onclick="location.href='Index.html'">
-        <div id="cart" onclick="login();"><img src="img/button/cart.svg" alt="" class="btn">Giỏ hàng</div>
-        <div id="signin" onclick="login();"><img src="img/button/login.svg" alt="" class="btn">Đăng nhập</div>
-        <div id="logout" onclick="logout();"></div>
+        <img id="backIndex" width="200px" src="img/logo.png" alt="" onclick="location.href='index.html'">
+        <div id="cart" onclick="showCart()"><img src="img/button/cart.svg" alt="" class="btn">Giỏ hàng (<span class="total-cart">0</span>)</div>
+
+        <div id="signin" onclick="location.href='login.html';"><img src="img/button/login.svg" alt="" class="btn">Đăng nhập</div>
+        <div id="signout" onclick="logout();" style="display: none;"><img src="img/button/logout.svg" alt="" class="btn">Đăng xuất</div>
     </div>
     <div class="taskbar">
         <div class="menu">
@@ -94,7 +95,6 @@
         </div>
     </div>
     <div id="banner">
-        <img src="banner1.jpg" width="1200px" height="300px" style="border-radius: 5px">
     </div>
     <div class="content">
         <div class="tab">
@@ -199,7 +199,38 @@
             </div>
         </div>
     </div>
-
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="cart">
+                <div class="cart-title"><strong>Có <span class="total-cart"></span> sản phẩm trong giỏ hàng</strong>
+                    <button class="btn clear-cart" onclick="clearItem()">Clear</button>
+                </div>
+                <div class="cart-info">
+                </div>
+                <div class="cart-total">
+                    <table>
+                        <tr>
+                            <td>Tổng tiền:</td>
+                            <td id="sum" align="right">0</td>
+                        </tr>
+                        <tr>
+                            <td>Giảm:</td>
+                            <td id="sale" align="right">0</td>
+                        </tr>
+                        <tr>
+                            <td>Cần thanh toán:</td>
+                            <td id="pay" align="right">0</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="right"><button id="btn-pay" onclick="payItem()">Thanh toán</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="noidung">
             <table class="itemfooter">
@@ -249,6 +280,7 @@
     </footer>
 </body>
 <script src="js/uptotop.js"></script>
-<script src="js/log.js"></script>
+<script src="js/login.js"></script>
+<script src="js/cart.js"></script>
 
 </html>

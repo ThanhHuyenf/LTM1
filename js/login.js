@@ -1,49 +1,71 @@
-const account = document.getElementsByClassName('acc')[0]
-const password = document.getElementsByClassName('pass')[0]
+if (localStorage.login == 'true') {
+    document.getElementById('signin').style.display = 'none';
+    document.getElementById('signout').style.display = 'block';
+} else {
+    document.getElementById('signout').style.display = 'none';
+    document.getElementById('signin').style.display = 'block';
+}
 
-const signacc = document.getElementsByClassName('sign__acc')[0]
-const signpass = document.getElementsByClassName('sign__pass')[0]
-const signrepass = document.getElementsByClassName('sign__repass')[0]
-
-localStorage.setItem('admin','1')
+// <<<<<<< HEAD
+// localStorage.setItem('admin','1')
+// =======
+function logout() {
+    localStorage.list = ''
+    localStorage.login = false
+    document.getElementById('backIndex').onclick()
+}
+// >>>>>>> 19e6adb9aab39212b40bb8e3151559ade9969791
 
 function submitlogin() {
-
-    if (account.value === '') {
-        alert('Vui long nhap tai khoan')
-    } else if (password.value === '') {
-        alert('Vui long nhap mat khau')
-    }else{
-        const user = localStorage.getItem(account.value)
-        console.log(user)
-        if (user == password.value) {
+    const username = document.getElementsByClassName('username')[0].value
+    const password = document.getElementsByClassName('password')[0].value
+    if (username === '') {
+        alert('Vui lòng nhập tài khoản')
+    } else if (password === '') {
+        alert('Vui lòng nhập mật khẩu')
+    } else {
+        if (username == localStorage.username && password == localStorage.password) {
+            localStorage.login = true;
+            localStorage.list = JSON.stringify([]);
             window.location = 'index.html'
         } else {
-            alert("Tai khoan khong hop le")
+            localStorage.login = false;
+            alert('Sai tên tài khoản hoặc mật khẩu')
         }
     }
 }
 
-function checkAccount() {
-    const user = localStorage.getItem(signacc.value)
+function statusLogin() {
+    return localStorage.login
+}
 
-    return user == null ? true : false
+function checkAccount(username) {
+    return localStorage.username != username
 }
 
 function checkSignin() {
-    if (signacc.value === '') {
+    var signUser = document.getElementsByClassName('sign__user')[0].value
+    var signPass = document.getElementsByClassName('sign__pass')[0].value
+    var signRepass = document.getElementsByClassName('sign__repass')[0].value
+    if (signUser === '') {
         alert('Tài khoản không hợp lệ')
-    } else if (signpass.value === '') {
+    } else if (signPass === '') {
         alert('Vui lòng nhập mật khẩu')
-    } else if (signrepass.value === '') {
+    } else if (signRepass === '') {
         alert('Vui lòng nhập lại mật khẩu')
-    } else if (checkAccount()) {
-        if (signpass.value == signrepass.value) {
-            if (signpass.value.length < 6) {
+    } else if (checkAccount(signUser)) {
+        if (signPass == signRepass) {
+            if (signPass.length < 6) {
                 alert('Mật khẩu chưa đủ độ dài tối thiểu! Vui lòng nhập lại')
             } else {
+// <<<<<<< HEAD
+//                 window.location = 'signupsuccess.html'
+                // localStorage.setItem(signacc.value, signpass.value)
+// =======
+                localStorage.username = signUser
+                localStorage.password = signPass
                 window.location = 'signupsuccess.html'
-                localStorage.setItem(signacc.value, signpass.value)
+{/*>>>>>>> 19e6adb9aab39212b40bb8e3151559ade9969791*/}
             }
         } else {
             alert('Mật khẩu không trùng khớp')
@@ -52,5 +74,3 @@ function checkSignin() {
         alert('Tài khoản đã tồn tại')
     }
 }
-
-
