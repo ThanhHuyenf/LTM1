@@ -5,9 +5,10 @@
     <title>Laptop Asus</title>
     <link rel="stylesheet" type="text/css" href="../../../style.css">
     <link rel="shortcut icon" href="../../../img/logo.ico">
+
 </head>
 
-<body>
+<body onload="showSlides(1)">
     <button onclick="topFunction()" id="btnUp" title="Go to top"><img src="../../../img/icon/up.svg" width="30px" alt=""></button>
     <div class="header">
         <img id="backIndex" width="200px" src="../../../img/logo.png" alt="" onclick="location.href='../../../index.html'">
@@ -98,7 +99,22 @@
         </div>
         <div class="detail">
             <div class="image">
-                <img src="../../../img/vivobook/vivobook_flip/TM420IA-EC031T/1.jpg" width="300px">
+                <div class="slideshow">
+                    <div class="slide fade">
+                        <img id="item-img" src="../../../img/vivobook/vivobook_flip/TM420IA-EC031T/1.jpg" width="300px">
+                    </div>
+                    <div class="slide fade">
+                        <img id="item-img" src="../../../img/vivobook/vivobook_flip/TM420IA-EC031T/2.jpg" width="300px">
+                    </div>
+                    <div class="slide fade">
+                        <img id="item-img" src="../../../img/vivobook/vivobook_flip/TM420IA-EC031T/3.jpg" width="300px">
+                    </div>
+                    <div class="slide fade">
+                        <img id="item-img" src="../../../img/vivobook/vivobook_flip/TM420IA-EC031T/4.jpg" width="300px">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
                 <span class="p-price-full">
                     <span class="price-border">16.790.000</span>
                 <span class="price-shadow">16.790.000</span>
@@ -273,5 +289,6 @@
 <script src="../../../js/showmore.js"></script>
 <script src="../../../js/login.js"></script>
 <script src="../../../js/cart.js"></script>
+<script src="../../../js/banner.js"></script>
 
 </html>

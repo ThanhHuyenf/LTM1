@@ -1,4 +1,4 @@
-if (JSON.parse(localStorage.getItem('login')).status == 'true') {
+if (localStorage.login == 'true') {
     document.getElementById('signin').style.display = 'none';
     document.getElementById('signout').style.display = 'block';
 } else {
@@ -7,16 +7,12 @@ if (JSON.parse(localStorage.getItem('login')).status == 'true') {
 }
 
 function logout() {
-    login = { 'status': 'false' }
-    localStorage.setItem('login', JSON.stringify(login))
+    localStorage.list = ''
+    localStorage.login = false
     document.getElementById('backIndex').onclick()
 }
 
 function submitlogin() {
-    var listAcc = JSON.parse(localStorage.getItem('listAcc'))
-    if (listAcc == null) {
-        return alert('Sai tên tài khoản hoặc mật khẩu')
-    }
     const username = document.getElementsByClassName('username')[0].value
     const password = document.getElementsByClassName('password')[0].value
     if (username === '') {
@@ -24,34 +20,23 @@ function submitlogin() {
     } else if (password === '') {
         alert('Vui lòng nhập mật khẩu')
     } else {
-        listAcc.forEach(account => {
-            if (username == account.username && password == account.password) {
-                login = { 'username': username, 'status': 'true' }
-                localStorage.setItem('login', JSON.stringify(login))
-                list = JSON.parse(localStorage.getItem('list'))
-                window.location = 'index.html'
-            } else {
-                login = { 'status': 'false' }
-                localStorage.setItem('login', JSON.stringify(login))
-                alert('Sai tên tài khoản hoặc mật khẩu')
-            }
-        })
+        if (username == localStorage.username && password == localStorage.password) {
+            localStorage.login = true;
+            localStorage.list = JSON.stringify([]);
+            window.location = 'index.html'
+        } else {
+            localStorage.login = false;
+            alert('Sai tên tài khoản hoặc mật khẩu')
+        }
     }
 }
 
 function statusLogin() {
-    return JSON.parse(localStorage.getItem('login')).status;
+    return localStorage.login
 }
 
 function checkAccount(username) {
-    var listAcc = JSON.parse(localStorage.getItem('listAcc'))
-    if (listAcc == null) return true
-    listAcc.forEach(account => {
-        if (username == account.username) {
-            return false
-        }
-    })
-    return true
+    return localStorage.username != username
 }
 
 function checkSignin() {
@@ -69,17 +54,8 @@ function checkSignin() {
             if (signPass.length < 6) {
                 alert('Mật khẩu chưa đủ độ dài tối thiểu! Vui lòng nhập lại')
             } else {
-                var account = { 'username': signUser, 'password': signPass }
-                var listAcc = JSON.parse(localStorage.getItem('listAcc'))
-                if (listAcc == null) {
-                    listAcc = []
-                }
-                var obj = { 'username': account.username, 'listItem': [] }
-                list = []
-                list.push(obj)
-                localStorage.setItem('list', JSON.stringify(list));
-                listAcc.push(account)
-                localStorage.setItem('listAcc', JSON.stringify(listAcc))
+                localStorage.username = signUser
+                localStorage.password = signPass
                 window.location = 'signinsuccess.html'
             }
         } else {
