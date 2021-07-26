@@ -3,8 +3,8 @@ if (localStorage.login == 'true') {
     document.getElementById('signin').style.display = 'none';
     document.getElementById('signout').style.display = 'block';
 } else {
-    document.getElementById('signout').style.display = 'none';
-    document.getElementById('signin').style.display = 'block';
+    if (document.getElementById('signout') != null) document.getElementById('signout').style.display = 'none';
+    if (document.getElementById('signin') != null) document.getElementById('signin').style.display = 'block';
 }
 
 function logout() {
@@ -14,8 +14,8 @@ function logout() {
 }
 
 function submitlogin() {
-    const username = document.getElementsByClassName('username')[0].value
-    const password = document.getElementsByClassName('password')[0].value
+    var username = document.getElementsByClassName('username')[0].value
+    var password = document.getElementsByClassName('password')[0].value
     if (username === '') {
         alert('Vui lòng nhập tài khoản')
     } else if (password === '') {

@@ -5,10 +5,9 @@
     <title>Laptop Asus</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="img/logo.ico">
-    <script src="js/banner.js"></script>
 </head>
 
-<body onload="changeImg()">
+<body>
     <button onclick="topFunction()" id="btnUp" title="Go to top"><img src="img/icon/up.svg" width="30px" alt=""></button>
     <div class="header">
         <img id="backIndex" width="200px" src="img/logo.png" alt="" onclick="location.href='index.html'">
@@ -94,110 +93,25 @@
             </div>
         </div>
     </div>
-    <div id="banner">
-    </div>
     <div class="content">
         <div class="tab">
             <div class="title">
-                <strong>TOP OF VIVOBOOK</strong>
+                <strong>Email cho chúng tôi</strong>
             </div>
-            <div class="list">
-                <div class="item">
-                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg" width="100px">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus VivoBook Flip 14 TM420IA-EC031T
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="laptop/vivobook/vivobook_s/S533JQ-BQ024T.html">
-                        <img src="img/vivobook/vivobook_s/S533JQ-BQ024T/0.jpg" width="100px">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus VivoBook S15 S533JQ-BQ024T
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="laptop/vivobook/vivobook/A415EA-EB558T.html">
-                        <img src="img/vivobook/vivobook/A415EA-EB558T/0.jpg">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus VivoBook A415EA-EB558T Gold
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <form action="#" class="myform">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" placeholder="Nhập họ và tên">
+                <label for="email">Số điện thoại</label>
+                <input type="text" placeholder="Nhập số điện thoại">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Nhập địa chỉ email">
+                <label for="country">Vấn đề bạn cần hỗ trợ</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="Submit" onclick="alert('Chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể!')">
+            </form>
         </div>
-        <div class="tab">
-            <div class="title">
-                <strong>TOP OF ZENBOOK</strong>
-            </div>
-            <div class="list">
-                <div class="item">
-                    <a href="laptop/zenbook/zenbook_duo/UX482EG-KA166T.html">
-                        <img src="img/zenbook/zenbook_duo/UX482EG-KA166T/0.jpg">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus ZenBook Duo 14 UX482EG-KA166T
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="laptop/zenbook/zenbook_flip/UX363EA-HP130T">
-                        <img src="img/zenbook/zenbook_flip/UX363EA-HP130T/0.jpg">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus ZenBook Flip 13 UX363EA-HP130T
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="laptop/zenbook/zenbook">
-                        <img src="img/zenbook/zenbook">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus ZenBook
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="laptop/zenbook/zenbook">
-                        <img src="img/zenbook/zenbook">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus ZenBook
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="tab">
-            <div class="title">
-                <strong>TOP OF ROG</strong>
-            </div>
-            <div class="list">
-                <div class="item">
-                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus VivoBook Flip 14 TM420IA-EC031T
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus VivoBook Flip 14 TM420IA-EC031T
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="laptop/vivobook/vivobook_flip/TM420IA-EC031T.html">
-                        <img src="img/vivobook/vivobook_flip/TM420IA-EC031T/0.jpg">
-                        <div style="margin-bottom: 20px;margin-left:10px;">
-                            Asus VivoBook Flip 14 TM420IA-EC031T
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+
     </div>
     <div id="myModal" class="modal">
         <div class="modal-content">
