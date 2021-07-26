@@ -5,7 +5,7 @@ const signacc = document.getElementsByClassName('sign__acc')[0]
 const signpass = document.getElementsByClassName('sign__pass')[0]
 const signrepass = document.getElementsByClassName('sign__repass')[0]
 
-const user = localStorage.getItem('huyen')
+localStorage.setItem('admin','1')
 
 function submitlogin() {
 
@@ -42,7 +42,7 @@ function checkSignin() {
             if (signpass.value.length < 6) {
                 alert('Mật khẩu chưa đủ độ dài tối thiểu! Vui lòng nhập lại')
             } else {
-                window.location = 'signinsuccess.html'
+                window.location = 'signupsuccess.html'
                 localStorage.setItem(signacc.value, signpass.value)
             }
         } else {
