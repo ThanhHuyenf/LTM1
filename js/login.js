@@ -1,3 +1,4 @@
+console.log("localStorage.login", localStorage)
 if (localStorage.login == 'true') {
     document.getElementById('signin').style.display = 'none';
     document.getElementById('signout').style.display = 'block';
@@ -6,15 +7,11 @@ if (localStorage.login == 'true') {
     document.getElementById('signin').style.display = 'block';
 }
 
-// <<<<<<< HEAD
-// localStorage.setItem('admin','1')
-// =======
 function logout() {
     localStorage.list = ''
     localStorage.login = false
     document.getElementById('backIndex').onclick()
 }
-// >>>>>>> 19e6adb9aab39212b40bb8e3151559ade9969791
 
 function submitlogin() {
     const username = document.getElementsByClassName('username')[0].value
@@ -58,14 +55,8 @@ function checkSignin() {
             if (signPass.length < 6) {
                 alert('Mật khẩu chưa đủ độ dài tối thiểu! Vui lòng nhập lại')
             } else {
-// <<<<<<< HEAD
-//                 window.location = 'signupsuccess.html'
-                // localStorage.setItem(signacc.value, signpass.value)
-// =======
-                localStorage.username = signUser
-                localStorage.password = signPass
                 window.location = 'signupsuccess.html'
-{/*>>>>>>> 19e6adb9aab39212b40bb8e3151559ade9969791*/}
+                localStorage.setItem(signacc.value, signpass.value)
             }
         } else {
             alert('Mật khẩu không trùng khớp')

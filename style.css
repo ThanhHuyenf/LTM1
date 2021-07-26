@@ -617,7 +617,7 @@ footer {
     padding: 8px;
 }
 
-.cart-total table td:nth-col() {
+.cart-total table td:nth-col {
     text-align: right;
 }
 
