@@ -1,7 +1,10 @@
-localStorage.setItem('admin1', JSON.stringify([{
-    name: ' huyen',
-    pass: '123'
-}]))
+
+localStorage.setItem('admin', JSON.stringify({
+    password: '1',
+    address: 'Ha Dong, Ha Noi',
+    phoneNumber: '123456'
+}))
+
 if (localStorage.login == 'true') {
     document.getElementById('signin').style.display = 'none';
     document.getElementById('signout').style.display = 'block';
@@ -18,6 +21,8 @@ function logout() {
 function submitlogin() {
     var username = document.getElementsByClassName('username')[0].value
     var password = document.getElementsByClassName('password')[0].value
+
+    console.log(password)
     if (username === '') {
         alert('Vui lòng nhập tài khoản')
     } else if (password === '') {
@@ -26,7 +31,9 @@ function submitlogin() {
         if (checkAccount(username)) {
             const temp = JSON.parse(localStorage.getItem(username))
 
-            if (temp[0].password === password) {
+            console.log(temp)
+
+            if (temp.password === password) {
                 localStorage.login = true;
                 window.location = 'index.html'
             }else {
