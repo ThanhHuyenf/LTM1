@@ -7,7 +7,7 @@ function changeImg() {
     list[4] = '<img src="img/banner/4.jpg"style="width: 100%;border-radius: 10px"></img>';
     i = Math.floor(Math.random() * list.length);
     document.getElementById('banner').innerHTML = list[i]
-    setTimeout(changeImg, 2000);
+    setTimeout(changeImg, 3000);
 }
 
 var slideIndex = 1
