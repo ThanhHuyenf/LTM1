@@ -318,7 +318,7 @@ footer {
 .content {
     width: 80%;
     margin: 0px auto;
-    min-height: 800px;
+    min-height: 830px;
 }
 
 .tab {
@@ -456,7 +456,7 @@ footer {
 }
 
 .expanded {
-    height: 1600px;
+    height: 1700px;
 }
 
 .readmoreText {
@@ -680,16 +680,10 @@ footer {
     user-select: none;
 }
 
-
-/* Position the "next button" to the right */
-
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
-
-/* On hover, add a black background color with a little bit see-through */
 
 .prev:hover,
 .next:hover {
@@ -719,4 +713,8 @@ footer {
     to {
         opacity: 1
     }
+}
+
+.image img {
+    vertical-align: middle;
 }
