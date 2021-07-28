@@ -1,4 +1,3 @@
-
 localStorage.setItem('admin', JSON.stringify({
     password: '1',
     address: 'Ha Dong, Ha Noi',
@@ -35,8 +34,9 @@ function submitlogin() {
 
             if (temp.password === password) {
                 localStorage.login = true;
+                localStorage.list = JSON.stringify([]);
                 window.location = 'index.html'
-            }else {
+            } else {
                 alert('Mật khẩu không đúng')
             }
         } else {
@@ -52,7 +52,7 @@ function statusLogin() {
 
 function checkAccount(username) {
     const check = localStorage.getItem(username)
-    //tài khoản có trong local sẽ trả về true, không tồn tại tài khoản sẽ trả về false
+        //tài khoản có trong local sẽ trả về true, không tồn tại tài khoản sẽ trả về false
     return check === null ? false : true
 }
 
@@ -69,9 +69,9 @@ function checkSignup() {
         alert('Vui lòng nhập mật khẩu')
     } else if (signRepass === '') {
         alert('Vui lòng nhập lại mật khẩu')
-    } else if(signAddress.trim() === ''){
+    } else if (signAddress.trim() === '') {
         alert('Vui lòng nhập lại địa chỉ')
-    }else if(signPhoneNumber.trim() === ''){
+    } else if (signPhoneNumber.trim() === '') {
         alert('Vui lòng nhập lại số điện thoại')
     } else if (!checkAccount(signUser)) {
         if (signPass === signRepass) {
