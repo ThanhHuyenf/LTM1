@@ -342,8 +342,6 @@ footer {
     width: 24%;
     /*background-color: yellow;*/
     float: left;
-    border-radius: 5px;
-    border: 1px solid black;
     transition-duration: 0.5s;
 }
 
@@ -837,4 +835,51 @@ textarea {
 
 .myform input[type=submit]:hover {
     background-color: #45a049;
+}
+
+.menu-col ul {
+    background-color: #d9e4f5;
+    background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+    width: 250px;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.menu-col li {
+    font-size: 20px;
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1em;
+}
+
+.menu-col li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.menu-col li:hover {
+    background: #CDE2CD;
+}
+
+.menu-col ul li {
+    position: relative;
+}
+
+.menu-col .sub-menu,
+.sub2-menu {
+    position: absolute;
+    left: 250px;
+    top: 0;
+    display: none;
+}
+
+.menu-col li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li:hover .sub2-menu {
+    display: block;
 }

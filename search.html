@@ -5,10 +5,9 @@
     <title>Laptop Asus</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="img/logo.ico">
-    <script src="js/banner.js"></script>
 </head>
 
-<body onload="changeImg()">
+<body onload="loadItem()">
     <button onclick="topFunction()" id="btnUp" title="Go to top"><img src="img/icon/up.svg" width="30px" alt=""></button>
     <div class="header">
         <img id="backIndex" width="200px" src="img/logo.png" alt="" onclick="location.href='index.html'">
@@ -17,9 +16,9 @@
         <div id="signin" onclick="location.href='login.html';"><img src="img/button/login.svg" alt="" class="btn">Đăng nhập</div>
         <div id="signout" onclick="logout();" style="display: none;"><img src="img/button/logout.svg" alt="" class="btn">Đăng xuất</div>
     </div>
-    <div class="taskbar">
+    <div class="taskbar" style="height: 200px">
         <div class="menu-col">
-            <ul class="root">
+            <ul>
                 <li>
                     <a href="index.html">Trang chủ</a>
                 </li>
@@ -31,7 +30,7 @@
                     <ul class="sub-menu">
                         <li>
                             <a href="laptop/vivobook/index.html">VivoBook</a>
-                            <ul class="sub2">
+                            <ul class="sub2-menu">
                                 <li>
                                     <a href="laptop/vivobook/Vivobook_Flip_TM420IA-EC031T.html">VivoBook Flip</a>
                                 </li>
@@ -45,7 +44,7 @@
                         </li>
                         <li>
                             <a href="laptop/zenbook/index.html">ZenBook</a>
-                            <ul class="sub2">
+                            <ul class="sub2-menu">
                                 <li>
                                     <a href="laptop/zenbook/Duo14UX482EK-KA166T.html">ZenBook Duo</a>
                                 </li>
@@ -74,17 +73,16 @@
             <div>
                 <form>
                     <input id="inputSearch" type="text" size="20">
-                    <input id="btnSearch" type="button" value="Tìm kiếm">
+                    <input id="btnSearch" type="button" value="Tìm kiếm" onclick="search()">
                 </form>
             </div>
         </div>
     </div>
-    <div id="banner">
-    </div>
+
     <div class="content">
         <div class="tab">
             <div class="title">
-                <strong>Kết quả tìm kiếm: </strong>
+                <strong>Kết quả tìm kiếm <span id="keyword">''</span>: <span id="total-search">0</span> sản phẩm </strong>
             </div>
             <div class="list">
                 <div class="item">
@@ -195,6 +193,7 @@
     </footer>
 </body>
 <script src="js/uptotop.js"></script>
+<script src="js/search.js"></script>
 <script src="js/login.js"></script>
 <script src="js/cart.js"></script>
 
