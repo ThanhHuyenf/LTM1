@@ -119,13 +119,25 @@
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <div class="cart">
-                            <div class="cart-title"><strong>Có <span class="total-cart"></span> sản phẩm trong giỏ
-                            hàng</strong>
+                            <div class="cart-title"><strong>Có <span class="total-cart"></span> sản phẩm trong giỏ hàng</strong>
                                 <button class="btn clear-cart" onclick="clearItem()">Clear</button>
                             </div>
                             <div class="cart-info">
                             </div>
                             <div class="cart-total">
+                                <div style="margin-left:3%;font-size: 18px; padding-right: 30%;">
+                                    <h4>Mã giảm giá</h4>
+                                    <form style="display:inline-flex">
+                                        <input id='coupon' type="text" placeholder="Nhập mã tại đây" size="30" style="line-height: 20px;padding: 5px; margin:10px">
+                                        <button type="button" class="btn apply" onclick="checkCoupon()">Áp dụng</button>
+                                    </form>
+                                    <h4>Địa chỉ</h4>
+                                    <input id='address' type="text" placeholder="Nhập địa chỉ nhận hàng" value="" size="60" style="line-height: 20px;padding: 5px; margin:10px">
+                                    <h4>Số điện thoại</h4>
+                                    <input id='phone' type="text" placeholder="Nhập số điện thoại" value="" size="30" style="line-height: 20px;padding: 5px; margin:10px">
+
+                                </div>
+
                                 <table>
                                     <tr>
                                         <td>Tổng tiền:</td>
@@ -141,9 +153,7 @@
                                     </tr>
                                     <tr>
                                         <td></td>
-                                        <td align="right">
-                                            <button id="btn-pay" onclick="payItem()">Thanh toán</button>
-                                        </td>
+                                        <td align="right"><button id="btn-pay" onclick="payItem()">Thanh toán</button></td>
                                     </tr>
                                 </table>
                             </div>

@@ -78,6 +78,7 @@ function showCart() {
         document.getElementById("sale").innerHTML = sale.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
         document.getElementById("pay").innerHTML = (sum - sale).toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
     }
+    checkCoupon();
     updateCart()
 }
 
@@ -123,7 +124,34 @@ function clearItem() {
 }
 
 function payItem() {
-    if (document.getElementsByClassName("total-cart")[0].textContent == 0) return alert("Bạn chưa mua gì cả :<")
-    alert("Thanh toán thành công")
+    if (checkCoupon()) {
+        showCart();
+        if (document.getElementsByClassName("total-cart")[0].textContent == 0) return alert("Bạn chưa mua gì cả :<")
+        if (document.getElementById('address').value == '') return alert('Bạn chưa nhập địa chỉ')
+        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+        var mobile = document.getElementById('phone').value;
+        if (mobile !== '') {
+            if (vnf_regex.test(mobile) == false) {
+                return alert('Số điện thoại của bạn không đúng định dạng');
+            }
+        } else {
+            return alert('Bạn chưa điền số điện thoại');
+        }
+        return alert("Thanh toán thành công")
+    }
+}
 
+function checkCoupon() {
+    var temp = document.getElementById('coupon').value;
+    if ((document.getElementById("pay").innerHTML < document.getElementById("sale").innerHTML)) {
+        return true;
+    } else if (temp == "VINHDEPTRAI") {
+        x = document.getElementById("pay").innerHTML;
+        document.getElementById("pay").innerHTML = document.getElementById("sale").innerHTML;
+        document.getElementById("sale").innerHTML = x;
+    } else if (temp != '') {
+        alert("Mã giảm giá không hợp lệ");
+        return false;
+    }
+    return true;
 }

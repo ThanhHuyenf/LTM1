@@ -1,4 +1,4 @@
-function search(n = 0) {
+function search(n) {
     localStorage.search = document.getElementById('inputSearch').value.toLowerCase();
     var temp = ''
     switch (n) {
@@ -30,7 +30,17 @@ function loadItem() {
     for (let i = 0; i < list.length; i++) {
         if (list[i][0].toLowerCase().search(s) != -1) {
             dem++;
-            document.getElementsByClassName('list')[0].innerHTML += '<div class="item"><a href="laptop/' + list[i][1] + '.html"><img src="img/' + list[i][2] + '" width="100px"><div style="margin-bottom: 20px;margin-left:10px;">' + list[i][0] + '</div></a></div>'
+            x = '<div class="item"><a href="laptop/' + list[i][1] + '.html"><img src="img/' + list[i][2] + '" width="100px"><div style="margin-bottom: 20px;margin-left:10px;">' + list[i][0] + '</div></a></div>';
+            document.getElementsByClassName('list')[0].innerHTML += x;
+        }
+    }
+    if (dem == 0) {
+        for (let i = 0; i < list.length; i++) {
+            temp = list[i][0].toLowerCase().split('').sort().join('');
+            if (temp.search(s) != -1) {
+                dem++;
+                document.getElementsByClassName('list')[0].innerHTML += '<div class="item"><a href="laptop/' + list[i][1] + '.html"><img src="img/' + list[i][2] + '" width="100px"><div style="margin-bottom: 20px;margin-left:10px;">' + list[i][0] + '</div></a></div>'
+            }
         }
     }
     document.getElementById('total-search').innerHTML = dem;

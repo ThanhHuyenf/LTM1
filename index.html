@@ -74,7 +74,7 @@
             <div>
                 <form>
                     <input id="inputSearch" type="text" size="20">
-                    <input id="btnSearch" type="button" value="Tìm kiếm" onclick="search()">
+                    <input id="btnSearch" type="button" value="Tìm kiếm" onclick="search(0)">
                 </form>
             </div>
         </div>
@@ -180,6 +180,19 @@
                 <div class="cart-info">
                 </div>
                 <div class="cart-total">
+                    <div style="margin-left:3%;font-size: 18px; padding-right: 30%;">
+                        <h4>Mã giảm giá</h4>
+                        <form style="display:inline-flex">
+                            <input id='coupon' type="text" placeholder="Nhập mã tại đây" size="30" style="line-height: 20px;padding: 5px; margin:10px">
+                            <button type="button" class="btn apply" onclick="checkCoupon()">Áp dụng</button>
+                        </form>
+                        <h4>Địa chỉ</h4>
+                        <input id='address' type="text" placeholder="Nhập địa chỉ nhận hàng" value="" size="60" style="line-height: 20px;padding: 5px; margin:10px">
+                        <h4>Số điện thoại</h4>
+                        <input id='phone' type="text" placeholder="Nhập số điện thoại" value="" size="30" style="line-height: 20px;padding: 5px; margin:10px">
+
+                    </div>
+
                     <table>
                         <tr>
                             <td>Tổng tiền:</td>
