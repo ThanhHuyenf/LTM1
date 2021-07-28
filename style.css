@@ -325,6 +325,7 @@ footer {
 }
 
 .tab {
+    margin-bottom: 30px;
     height: 340px;
     background: white;
     border-radius: 10px;
