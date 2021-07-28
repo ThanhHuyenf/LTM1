@@ -490,6 +490,8 @@ footer {
 }
 
 .modal-content {
+    max-height: 80%;
+    overflow-y: auto;
     background-color: #fefefe;
     margin: auto;
     padding: 20px;

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ASUS ROG G14 GA401QC-HZ032T</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <link rel="shortcut icon" href="../../img/logo.ico">
+
+</head>
+
+<body onload="showSlides(1)">
+    <button onclick="topFunction()" id="btnUp" title="Go to top"><img src="../../img/icon/up.svg" width="30px" alt="">
+</button>
+    <div class="header">
+        <img id="backIndex" width="200px" src="../../img/logo.png" alt="" onclick="location.href='../../index.html'">
+        <div id="cart" onclick="showCart()"><img src="../../img/button/cart.svg" alt="" class="btn">Giỏ hàng (<span class="total-cart"></span>)
+        </div>
+        <div id="signin" onclick="location.href='../../login.html';"><img src="../../img/button/login.svg" alt="" class="btn">Đăng nhập
+        </div>
+        <div id="signout" onclick="logout();" style="display: none;"><img src="../../img/button/logout.svg" alt="" class="btn">Đăng xuất
+        </div>
+    </div>
+    <div class="taskbar">
+        <div class="menu">
+            <ul class="root">
+                <li>
+                    <a href="../../index.html">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="../../about.html">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="../../index.html">Sản phẩm</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="../../laptop/vivobook/index.html">VivoBook</a>
+                            <ul class="sub2">
+                                <li>
+                                    <a href="Vivobook_Flip_TM420IA-EC031T.html">VivoBook Flip</a>
+                                </li>
+                                <li>
+                                    <a href="VivoBook_S15_S533JQ-BQ024T.html">VivoBook S</a>
+                                </li>
+                                <li>
+                                    <a href="VivoBook_A415EA-EB558T_Gold.html">VivoBook A</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../laptop/zenbook/index.html">ZenBook</a>
+                            <ul class="sub2">
+                                <li>
+                                    <a href="../zenbook/Duo14UX482EK-KA166T.html">ZenBook Duo</a>
+                                </li>
+                                <li>
+                                    <a href="../zenbook/S13_UX392.html">ZenBook S</a>
+                                </li>
+                                <li>
+                                    <a href="../zenbook/Flip13UX363EA-HP130T.html">ZenBook Flip</a>
+                                </li>
+                                <li>
+                                    <a href="../zenbook/Pro_Duo_UX581.html">ZenBook Pro</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../laptop/rog/index.html">Republic of Gamers</a>
+                            <ul class="sub2">
+                                <li>
+                                    <a href="../../laptop/rog/rog-zephyus/index.html">ROG Zephyus</a>
+                                </li>
+                                <li>
+                                    <a href="../../laptop/rog/rog-series/index.html">ROG Series</a>
+                                </li>
+                                <li>
+                                    <a href="../../laptop/rog/rog-series/index.html">ROG Strix</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="../../contact.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <div>
+                <form>
+                    <input id="inputSearch" type="text" size="20">
+                    <input id="btnSearch" type="button" value="Tìm kiếm">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h3>ASUS ROG G14 GA401QC-HZ032T</h3>
+        </div>
+        <div class="detail">
+            <div class="image">
+                <div class="slideshow">
+                    <div class="slide fade">
+                        <img src="../../img/rog/GA401QC-HZ032T/1.jpg" width="400px">
+                    </div>
+                    <div class="slide fade">
+                        <img src="../../img/rog/GA401QC-HZ032T/2.jpg" width="400px">
+                    </div>
+                    <div class="slide fade">
+                        <img src="../../img/rog/GA401QC-HZ032T/3.jpg" width="400px">
+                    </div>
+                    <div class="slide fade">
+                        <img src="../../img/rog/GA401QC-HZ032T/4.jpg" width="400px">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <!-- <button class="btn btn-primary" id="buynow" data-toggle="modal" data-target="#cart">Mua ngay</button> -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="cart">
+                            <div class="cart-title"><strong>Có <span class="total-cart"></span> sản phẩm trong giỏ
+                            hàng</strong>
+                                <button class="btn clear-cart" onclick="clearItem()">Clear</button>
+                            </div>
+                            <div class="cart-info">
+                            </div>
+                            <div class="cart-total">
+                                <table>
+                                    <tr>
+                                        <td>Tổng tiền:</td>
+                                        <td id="sum" align="right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giảm:</td>
+                                        <td id="sale" align="right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cần thanh toán:</td>
+                                        <td id="pay" align="right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td align="right">
+                                            <button id="btn-pay" onclick="payItem()">Thanh toán</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary">
+                Hàng sắp về
+            </button>
+            </div>
+            <div class=" info ">
+                <span class="p-price-full">
+                    <span class="price-border">40.000.000</span>
+                <span class="price-shadow">40.000.000</span>
+                </span>
+                <table>
+                    <h2 style="margin-bottom: 20px;">Thông số kĩ thuật</h2>
+                    <tr>
+                        <td>CPU</td>
+                        <td>AMD Ryzen 7-5800HS (2.80GHz up to 4.40GHz, 16M Cache)</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>16GB, DDR4 3200MHz 1 khe cắm 16 GB (8GB onboard + 8GB)</td>
+                    </tr>
+                    <tr>
+                        <td>Màn hình</td>
+                        <td>14 inches, 1920 x 1080 pixels (FullHD)</td>
+                    </tr>
+                    <tr>
+                        <td>Đồ họa</td>
+                        <td>NVIDIA GeForce RTX 3050 4GB GDDR6</td>
+                    </tr>
+                    <tr>
+                        <td>Ổ cứng</td>
+                        <td>512GB SSD M.2 NVMe PCIe</td>
+                    </tr>
+                    <tr>
+                        <td>Hệ điều hành</td>
+                        <td> Windows 10 Home SL</td>
+                    </tr>
+                    <tr>
+                        <td>Trọng lượng (kg)</td>
+                        <td>1.70 Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Kích thước (mm)</td>
+                        <td>324 x 220.55 x 18</td>
+                    </tr>
+                    <tr>
+                        <td>Xuất xứ</td>
+                        <td>Trung Quốc</td>
+                    </tr>
+                    <tr>
+                        <td>Năm ra mắt</td>
+                        <td>2021</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="description">
+            <div class="readmoreText">
+                <h2>Đánh giá chi tiết ASUS Gaming ROG Zephyrus G14 GA401QC-HZ032T – "Quái vật" đáng gờm</h2>
+                <p>Bạn muốn trải nghiệm những tựa game cực kỳ hot nhưng không phải là trên dàn PC mà là trên chiếc laptop. Nghe có vẻ khó nhưng thực chất là một điều dễ dàng đối với laptop ASUS Gaming ROG Zephyrus G14 GA401QC-HZ032T.</p>
+                <h3>Màn hình sắc nét vượt trội</h3>
+                <p>Laptop ASUS Gaming ROG Zephyrus G14 GA401QC-HZ032T là dòng laptop gaming nhưng có sự pha trộn với laptop kiểu dáng văn phòng. Thực chất, phong cách nó khá tối giản, không cầu kỳ chỉ với bề mặt phẳng được làm nhám cùng với bốn góc được
+                    vát hơn nhọn để tạo cảm giác mạnh mẽ. Màn hình được trang bị với kích thước 14 inches, độ phân giải lên đến FullHD mang đến khả năng hiển thị sắc nét. Bổ sung bởi tấm nền IPS giúp tái tạo màu sắc trung thực, phù hợp với những công
+                    việc chỉnh sửa hình ảnh. Bên cạnh đó là tần số quét 144 Hz giúp thể hiện mượt mà tất cả chuyển động.</p>
+                <br>
+                <img src="https://cdn.cellphones.com.vn/media/wysiwyg/laptop/laptop-asus-rog-zephyrus-g14-ga401qc-hz032t-1-min.jpg" alt="" width="350px">
+                <h3>Hiệu năng siêu mạnh bởi vi xử lý AMD và VGA NVIDIA</h3>
+                <p>Điều gì mang đến một hiệu năng mạnh mẽ. Đó là CPU AMD Ryzen 7-5800HS với mức xung nhịp có thể tăng cao 4,4 GHz mang đến khả năng xử lý hiệu năng, dữ liệu nhanh chóng.Bổ sung thêm cấu hình của ASUS Gaming ROG Zephyrus G14 GA401QC-HZ032T
+                    là VGA NVIDIA GeForce RTX 3050 4GB nhằm tăng cường khả năng xử lý đồ họa cho các chương trình thiết kế và những tựa game nổi tiếng. Đi kèm với đó là dung lượng RAM lớn hỗ trợ đa nhiệm và 512 GB SSD nhằm hỗ trợ khả năng lưu trữ nhưng
+                    vẫn đảm bảo xử lý truy xuất.</p>
+                <br>
+                <img src="https://cdn.cellphones.com.vn/media/wysiwyg/laptop/laptop-asus-rog-zephyrus-g14-ga401qc-hz032t-2-min.jpg" alt="" width="400px">
+            </div>
+            <button class="btn btn-readmore">Đọc thêm</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="noidung">
+            <table class="itemfooter">
+                <tr class="itemrow">
+                    <td class="itemcol">
+                        <h3 class="footerheading">Danh sách chi nhánh</h3>
+                        <ul>
+                            <li>Số 12 Xuân Thủy, Cầu Giấy, Hà Nội</li>
+                            <li>Số 56 Thợ Nhuộm, Hoàn Kiếm, Hà Nội</li>
+                            <li>Số 34 Nguyễn Văn Cừ, Long Biên, Hà Nội</li>
+                        </ul>
+                    </td>
+                    <td class="itemcol">
+                        <h3 class="footerheading">Chăm sóc khách hàng</h3>
+                        <ul>
+                            <li><a href="../../">Trung tâm trợ giúp</a></li>
+                            <li><a href="../../">Asus Mall</a></li>
+                            <li><a href="../../">Hướng dẫn mua hàng</a></li>
+                        </ul>
+                    </td>
+                    <td class="itemcol">
+                        <h3 class="footerheading">Laptop Asus</h3>
+                        <ul>
+                            <li><a href=" ../../">Giới thiệu</a></li>
+                            <li><a href="../../">Tuyển dụng</a></li>
+                            <li><a href="../../">Điều khoản</a></li>
+                        </ul>
+                    </td>
+                    <td class="itemcol">
+                        <h3 class="footerheading">Theo dõi chúng tôi trên</h3>
+                        <img src="../../img/social/facebook.svg" width="40px" alt="" onclick="window.open('https:\/\/www.facebook.com')">
+                        <img src="../../img/social/instagram.svg" width="40px" alt="" onclick="window.open('https:\/\/www.instagram.com')">
+                        <img src="../../img/social/youtube.svg" width="40px" alt="" onclick="window.open('https:\/\/www.youtube.com')">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <p style="color:#737373; margin-top: 20px;">© 2021 - Laptop Asus</p>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </footer>
+</body>
+<script src="../../js/uptotop.js"></script>
+<script src="../../js/showmore.js"></script>
+<script src="../../js/login.js"></script>
+<script src="../../js/cart.js"></script>
+<script src="../../js/banner.js"></script>
+
+</html>
